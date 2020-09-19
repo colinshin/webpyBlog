@@ -1,0 +1,14 @@
+
+D	Web:S1827"(Remove this deprecated "name" attribute.(ÖÔÁä8ı×ò¼È.
+n Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(¿ÀÔÅ8›·ö¼È.
+JWeb:BoldAndItalicTagsCheck2"Replace this <i> tag by <em>.(‡’Ä”8ô¨ù¼È.
+I	Web:S18271"(Remove this deprecated "name" attribute.(Îå®›úÿÿÿÿ8ô¨ù¼È.
+JWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(Õ¶¯M8ı×ò¼È.
+a	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ8ı×ò¼È.
+n Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(™§¾—8›·ö¼È.
+s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(³¬­âúÿÿÿÿ8›·ö¼È.
+OWeb:BoldAndItalicTagsCheck0"Replace this <i> tag by <em>.(æáÿÇûÿÿÿÿ8ô¨ù¼È.
+SWeb:ImgWithoutAltCheck)"%Add an "alt" attribute to this image.(²àÉ³şÿÿÿÿ8ô¨ù¼È.
+s Web:TableHeaderHasIdOrScopeCheck ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ıÀ¶Ûûÿÿÿÿ8ı×ò¼È.
+TWeb:TableWithoutCaptionCheck" Add a description to this table.(¼ëùÏşÿÿÿÿ8ı×ò¼È.
+n Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(·ÆÖ8›·ö¼È.

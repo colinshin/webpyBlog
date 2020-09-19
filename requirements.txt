@@ -1,0 +1,12 @@
+web.py==0.61
+python-magic==0.4.18
+peewee==3.13.3
+pillow==7.2.0
+flup==1.0.3
+cryptography==0.9
+m2crypto==0.22.3
+pycurl==7.19.0
+PyMySQL==0.10.0
+html5lib
+beautifulsoup4
+redis

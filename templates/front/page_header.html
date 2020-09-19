@@ -1,0 +1,56 @@
+$def with (private_data)
+<nav class="navbar navbar-expand-lg navbar-light nav-color-nav  navbar-lk text-dark">
+    <div class="container">
+        <a class="navbar-brand xiyuan" href="/">
+            <img src="$static_url('/images/logo.png')" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#nabmune" aria-controls="nabmune"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="nabmune">
+            <ul class="navbar-nav nav-color ">
+                <li class="nav-item active ">
+                    <a class="nav-link" href="/">首页 <span
+                            class="sr-only">(current)</span></a>
+                </li>
+<!--                <li class="nav-item ">-->
+<!--                    <a class="nav-link" href="chat.html">说说</a>-->
+<!--                </li>-->
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#"
+                       id="navbarDropdown" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        分类
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        $for cat in private_data['category_list']:
+                            <a class="dropdown-item" href="$make_url('/article/list', {'category_id':cat.id})">$:cat.name</a>
+<!--                        <div class="dropdown-divider"></div>-->
+<!--                        <a class="dropdown-item" href="category.html">jq</a>-->
+                    </div>
+                </li>
+<!--                <li class="nav-item ">-->
+<!--                    <a class="nav-link" href="picture.html">相册</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item ">-->
+<!--                    <a class="nav-link" href="life.html">生活</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item ">-->
+<!--                    <a class="nav-link" href="chat.html">心得</a>-->
+<!--                </li>-->
+                <li class="nav-item ">
+                    <a class="nav-link" href="about.html">关于</a>
+                </li>
+
+
+            </ul>
+            <!--<form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>-->
+        </div>
+    </div>
+</nav>

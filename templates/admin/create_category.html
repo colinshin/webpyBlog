@@ -1,0 +1,68 @@
+$def with (privData)
+<!DOCTYPE html>
+<html>
+<head>
+$:privData['render'].header(privData)
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+$:privData['render'].pageheader(privData)
+<div class="col-md-12 p5-nav-bar">
+    <div class="col-sm-12">
+        <a href="$makeUrl('/index')">
+            <span class="glyphicon glyphicon-home"></span>
+            <span>首页</span>
+        </a>&gt;&gt;
+        <a href="$makeUrl('/categories/list')"><span>分类列表</span></a>&gt;
+        <a href="$makeUrl('/categories/add')"><span>新增分类</span></a>
+    </div>
+</div>
+<section class="content">
+    <div class="row">
+      <div class="has-max">
+        <div class="col-md-12 col-lg-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">分类列表</h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="glyphicon glyphicon-minus"></i></button>
+                    </div>
+                </div>
+                <div class="box-body" style="display:block;">
+                    <form id="formvalidate" action="$makeUrl('/categories/save')" method="post" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="name" class="col-md-offset-1 col-md-2 control-label col-lg-1">* 名称:</label>
+                            <div class="col-md-7 col-lg-8">
+                                <input type="text" id="name" name="name" class="form-control" placeholder="名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="parent" class="col-md-offset-1 col-md-2 control-label col-lg-1">&nbsp;&nbsp;父类:</label>
+                            <div class="col-md-7 col-lg-8">
+                                <SELECT name="parent" id="parent" class="form-control">
+                                    $for i in privData['CATEGORIES_LIST']:
+                                    <option value="$i.id">$i.name</option>
+                                </SELECT>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="desc" class="col-md-offset-1 col-md-2 control-label col-lg-1">&nbsp;&nbsp;描述:</label>
+                            <div class="col-md-7 col-lg-8">
+                                <textarea class="form-control" id="desc" placeholder="Experience" name="desc" type="text"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-lg-10">
+                                <button type="submit" name="submit" class="btn btn-info pull-right" id="submits">保存</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
+$:privData['render'].foot(privData)
+</body>
+<script src="$staticUrl('common/admin/admin.validate.min.js')"></script>
+</html>

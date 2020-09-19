@@ -1,0 +1,52 @@
+$def with (privData)
+<!DOCTYPE html>
+<html>
+<head>
+$:privData['render'].header(privData)
+</head>
+<style>
+    p{width: 100%;text-align: right;-webkit-margin-before: 5px;}
+    h3{text-align: center;-webkit-margin-after: 5px;}
+</style>
+<body class="hold-transition skin-blue sidebar-mini">
+$:privData['render'].pageheader(privData)
+<div class="col-md-12 p5-nav-bar">
+    <div class="col-sm-12">
+        <a href="$makeUrl('/index')">
+            <span class="glyphicon glyphicon-home"></span>
+            <span>首页</span>
+        </a>&gt;&gt;
+        <span>系统维护</span>&gt;
+        <a href="$makeUrl('/install/about')"><span>版权说明</span></a>
+    </div>
+</div>
+<article class="content">
+<div class="row">
+<div class="has-max">
+<div class="col-md-12 col-lg-12">
+<div class="box box-info">
+    <div class="box-body" style="display:block;">
+    <header style="margin:2px;">
+        <h3>版权说明</h3>
+        <p>发表时间：
+            <time pubdate datetime="2015/08/30" style="margin-right:5px;">2015/08/30</time> 
+        </p>       
+    </header>
+    <section style="margin:2px;">
+        <article style="text-indent:2em;">
+      本网站包含的所有内容（包括但不限于：文本、图形、图片、视像及声音内容、LOGO标识，版面设计，专栏目录与名称、内容分类）的所有权归武汉和网信息科技有限公司所有。本网站的内容和软件均受《中华人民共和国著作权法》及其它相关法律的保护。任何单位或个人将本网站提供的内容与服务用于商业、盈利、广告性等目的时，需征得相关权利人的书面许可；将本网站提供的内容与服务用于非商业用途时，应遵守著作权法以及其他相关法律的规定，不得侵犯网站所有者及相关权利人的权益。
+        </article>
+    </section>
+    <section style="margin-right:5px;">
+        <p style="margin-top:20px;">声明单位：互联网+应用平台服务运营中心</p>
+    </section>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</article>
+$:privData['render'].foot(privData)
+</body>
+</html>
+

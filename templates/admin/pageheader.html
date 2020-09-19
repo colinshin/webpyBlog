@@ -1,0 +1,124 @@
+$def with (private_data)
+<div class="wrapper" style="position: static;">
+<header class="main-header">
+    <a href="#" class="logo">
+        <span class="logo-mini"><b>互联网+应用平台</b></span>
+        <span class="logo-lg">互联网+应用平台</span>
+    </a>
+    <nav class="navbar navbar-static-top" role="navigation">
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" style="height:50px;vertical-align: middle;">
+            <i class="fa fa-align-justify fa-fw fa-2x" aria-hidden="true"  style="font-size:26px;margin-top:-10px;"></i>
+        </a>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown user user-menu" style="margin-top:12px;margin-right:12px;">
+                    <img src="$static_url('images/default.jpg')" class="user-image" />
+                    <a href="$make_url('/logout')" style="color:white;padding:0;float:left;">
+                        <span class="hidden-xs">Admin</span>
+                        <span class="user-footer">退出</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<aside class="main-sidebar">
+    <section class="sidebar">
+        <ul class="sidebar-menu" id="sidebar-menu">
+            <li class="treeview">
+                <a href="$make_url('/index')">
+                    <i class="fa fa-home fa-fw fa-2x" aria-hidden="true"></i><span>&nbsp;&nbsp;首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</span>
+                </a>
+            </li>
+             <li class="treeview">
+                <a href="$make_url('/users/list')">
+                    <i class="fa fa-user fa-fw fa-2x" aria-hidden="true"></i><span>&nbsp;&nbsp;会员列表</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="$make_url('/categories')">
+                    <i class="fa fa-tree fa-fw fa-2x" aria-hidden="true"></i><span>&nbsp;&nbsp;分类列表</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-file-image-o fa-fw fa-2x" aria-hidden="true"></i>
+                    <span>&nbsp;&nbsp;媒体管理</span>
+                    <i class="fa fa-angle-right  pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="$make_url('/albums')">&nbsp;&nbsp;专辑列表</a></li>
+                    <li><a href="$make_url('/images')">&nbsp;&nbsp;图片列表</a></li>
+                </ul>
+            </li>
+               <li class="treeview">
+                <a href="$make_url('/articles')">
+                    <i class="fa fa-book fa-fw fa-2x" aria-hidden="true"></i><span>&nbsp;&nbsp;文章列表</span>
+                </a>
+            </li>
+
+            <li class="treeview">
+                <a href="$make_url('/products')">
+                    <i class="fa fa-flag-checkered fa-fw fa-2x" aria-hidden="true"></i><span>&nbsp;&nbsp;产品列表</span>
+                </a>
+            </li>
+
+             <li class="treeview">
+                <a href="$make_url('/groups')">
+                    <i class="fa fa-th-large fa-fw fa-2x" aria-hidden="true"></i>
+                    <span>&nbsp;&nbsp;公司列表</span>
+                </a>
+            </li>
+
+             <li class="treeview">
+                <a href="$make_url('/message_boards')">
+                    <i class="fa fa-envelope fa-fw fa-2x" aria-hidden="true"></i>
+                    <span>&nbsp;&nbsp;留言列表</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-beer fa-fw fa-2x" aria-hidden="true"></i>
+                    <span>&nbsp;&nbsp;交易管理</span>
+                    <i class="fa fa-angle-right  pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="$make_url('/transactions/list')">&nbsp;&nbsp;订单列表</a></li>
+                    <li><a href="$make_url('/shippings/list')">&nbsp;&nbsp;发货信息</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="$make_url('/chatrooms')">
+                    <i class="fa fa-weixin fa-2x fa-fw" aria-hidden="true"></i>
+                    <span>&nbsp;&nbsp;聊天列表</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-refresh fa-2x fa-fw"></i>
+                    <span>&nbsp;&nbsp;网站建设</span>
+                    <i class="fa fa-angle-right  pull-right"></i>
+                </a>
+                <ul class="treeview-menu" id="ilinks" style="padding-bottom:5px">
+                    <li><a href="$make_url('/templates/site_info')">&nbsp;&nbsp;基本参数</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-cog fa-2x fa-fw"></i>
+                    <span class="sr-only">Loading...</span>
+                    <span>&nbsp;&nbsp;系统维护</span>
+                    <i class="fa fa-angle-right  pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <!--<li><a href="$make_url('/templates/site_info')">&nbsp;&nbsp;平台编辑</a></li>-->
+                    <li><a href="$make_url('/install/about')">&nbsp;&nbsp;版权管理</a></li>
+                    <li><a href="$make_url('/config_items')">&nbsp;&nbsp;配置管理</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</aside>
+<div class="content-wrapper">

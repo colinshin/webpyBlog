@@ -1,0 +1,20 @@
+
+\javascript:S2137&"ADo not use "undefined" to declare a parameter - use another name.(«¤ÊH
+Sjavascript:S1854š"1Remove this useless assignment to variable "url".(šã„Šûÿÿÿÿ
+Mjavascript:S1117«"+'i' is already declared in the upper scope.(Áè®şıÿÿÿÿ
+Ojavascript:S1117«"-'ien' is already declared in the upper scope.(Áè®şıÿÿÿÿ
+Mjavascript:S1117ü"+'e' is already declared in the upper scope.(³¥Ëûüÿÿÿÿ
+Mjavascript:S1117˜"+'i' is already declared in the upper scope.(ñü¥şÿÿÿÿ
+Ojavascript:S1117˜"-'ien' is already declared in the upper scope.(ñü¥şÿÿÿÿ
+Qjavascript:S1117ÿ"4'mergeCells' is already declared in the upper scope.(÷å­
+Qjavascript:S930	"6This function expects 1 argument, but 2 were provided.(ÓãÉS
+Rjavascript:S930’	"6This function expects 1 argument, but 2 were provided.(ıè§
+Rjavascript:S930™	"6This function expects 1 argument, but 2 were provided.(ÁòÜñ
+Qjavascript:S930 	"6This function expects 1 argument, but 2 were provided.(ö¼Êh
+Rjavascript:S930¦	"6This function expects 1 argument, but 2 were provided.(¯×óÚ
+Rjavascript:S930¬	"6This function expects 1 argument, but 2 were provided.(­³¦®
+Qjavascript:S1117à	"/'jszip' is already declared in the upper scope.(æÄ âúÿÿÿÿ
+Rjavascript:S1481¤
+"5Remove the declaration of the unused 'that' variable.(Ä¾îĞ
+Ojavascript:S1854¤
+"2Remove this useless assignment to variable "that".(Ä¾îĞ

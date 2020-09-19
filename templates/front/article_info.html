@@ -1,0 +1,74 @@
+$def with (private_data)
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <title>$:private_data['article'].name</title>
+    $:private_data['render'].front.header(private_data)
+
+</head>
+<body>
+<!--导航-->
+$:private_data['render'].front.page_header(private_data)
+
+<!--内容-->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="container">
+                <div class="row mt-2">
+                    <div class="col-md-12 bgc">
+                        <div class="new">
+                            <span>$:private_data['article'].name</span>
+                        </div>
+                        <div class="article-title">
+                            <!--<span>最新文章</span>
+                            <small>New Article</small>-->
+                            <ul>
+                                <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>$:private_data['article'].createTime</a></li>
+                                <li class="d-none d-sm-none d-md-none d-lg-block">&nbsp;&nbsp;<i class="el-user"></i>惜缘</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-2 bgc">
+                        <div class="article-body">
+                           $:private_data['article'].content
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!--右边-->
+        $:private_data['render'].front.page_right(private_data)
+    </div>
+
+</div>
+
+<!--底部-->
+$:private_data['render'].front.footer(private_data)
+<script>
+    window.onload=function () {
+        var art_list=document.getElementById('box');
+        var art_list_a=art_list.getElementsByTagName('a');
+
+        for (var i=0;i<art_list_a.length;i++){
+
+            var aclick = art_list_a[i];
+
+            aclick.onclick=function(){
+
+                for (var j=0;j<art_list_a.length;j++){
+                    art_list_a[j].className='';
+                    art_list_a[j].style.color='#000000';
+                }
+                this.className='actives';
+                this.style.color='#ffffff';
+            };
+
+        }
+    }
+</script>
+</body>
+</html>

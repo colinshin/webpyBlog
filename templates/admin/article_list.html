@@ -1,0 +1,75 @@
+$def with (private_data)
+<!DOCTYPE html>
+<html>
+<head>
+$:private_data['render'].admin.header(private_data)
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+$:private_data['render'].admin.aside(private_data)
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">分类管理</h3>
+                <div class="card-tools">
+                    <a id="deleteBatch" href="#" name="article" class="btn btn-default btn-sm floatRight add-and-delete">删除</a>
+                    <a href="$make_url('/admin/create_article')" class="btn btn-success btn-sm floatRight add-and-delete">新增</a>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>图片</th>
+                        <th>分类</th>
+                        <th>标题</th>
+                        <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  $for i in private_data['article_list']:
+                    <tr>
+                        <td class="mailbox-name">$i.id</td>
+                        <td class="mailbox-name">
+                            <a href="#">
+                                <img src="$make_url('/images/thumbnail',{'id':i.thumbnail.id})" style="height:17px;width:30px;"/>
+                            </a>
+                        </td>
+                        <td class="mailbox-name">$i.category.name</td>
+                        <td class="mailbox-name" style="text-align:left;">$i.name[:60]</td>
+                        <td class="mailbox-name">
+                            <a href="$make_url('/articles/show',{'id':i.id})"  title="详情">
+                                <i class="fa fa-wrench"></i></a>&nbsp;
+                            <a href="#" name="/articles/delete?id=" onclick="deleteConfirm(name,$i.id)" title="删除">
+                                <i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+                <div class="card-footer">
+                    <div class="card-tools">
+                  <ul class="pagination pagination-sm float-right">
+                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                  </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+$:private_data['render'].admin.foot(private_data)
+</body>

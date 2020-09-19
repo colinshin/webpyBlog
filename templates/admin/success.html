@@ -1,0 +1,28 @@
+$def with (privData)
+<!DOCTYPE html>
+<html>
+<head>
+$:privData['render'].header(privData)
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+$:privData['render'].pageheader(privData)
+<div class="box-header with-border"></div>
+<div style="width: 600px; word-wrap: break-word; margin: 20px auto;text-align: center; padding: 20px 4px;background: #EFEFF1;font-size:20px;">
+<a href="javascript:location.href=' $:privData['JUMP_URL'] ';">$:privData['JUMP_MSG'] (<font id="percent">$:privData['JUMP_TIMEOUT']</font>秒后跳转，点击马上跳转）</a></div>
+
+<script language="javascript">
+    var bar=$:privData['JUMP_TIMEOUT'] ;
+    function count(){
+        bar=bar-1 ;
+        document.getElementById("percent").innerHTML=bar;
+        if (bar>0){
+            setTimeout("count()",1000);
+        }else{
+            location.href="$:privData['JUMP_URL']";
+        }
+    }
+    count() ;
+</script>
+$:privData['render'].foot(privData)
+</body>
+</html>

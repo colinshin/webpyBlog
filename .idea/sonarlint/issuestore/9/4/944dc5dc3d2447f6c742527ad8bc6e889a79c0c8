@@ -1,0 +1,15 @@
+
+Rjavascript:S1117""1'command' is already declared in the upper scope.(ãµ¦øÿÿÿÿ
+Njavascript:S1117%"-'res' is already declared in the upper scope.(­ëÓÇúÿÿÿÿ
+Qjavascript:S1481N"5Remove the declaration of the unused 'dxdy' variable.(µÁ¿ù
+Ujavascript:S1481”"3Remove the declaration of the unused 'xy' variable.(¼·«·ùÿÿÿÿ
+Qjavascript:S1854ë"5Remove this useless assignment to variable "newfill".(Òz
+Sjavascript:S1481ğ"6Remove the declaration of the unused 'attrs' variable.(«¨Ş 
+Pjavascript:S1854ğ"3Remove this useless assignment to variable "attrs".(«¨Ş 
+Zjavascript:S1481ò"8Remove the declaration of the unused 'opacity' variable.(¬ÄË½ùÿÿÿÿ
+Yjavascript:S1481ó"7Remove the declaration of the unused 'oindex' variable.(œÏ”İÿÿÿÿÿ
+Tjavascript:S1481…"2Remove the declaration of the unused 'a' variable.(¾µâîüÿÿÿÿ
+Qjavascript:S1854…"/Remove this useless assignment to variable "a".(¾µâîüÿÿÿÿ
+Tjavascript:S1481•"2Remove the declaration of the unused 'a' variable.(¾µâîüÿÿÿÿ
+Qjavascript:S1854•"/Remove this useless assignment to variable "a".(¾µâîüÿÿÿÿ
+Tjavascript:S1481¤"2Remove the declaration of the unused 's' variable.(‰€ÆŒúÿÿÿÿ

@@ -1,0 +1,90 @@
+$def with (private_data)
+<!DOCTYPE html>
+<html>
+<head>
+$:private_data['render'].admin.header(private_data)
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+$:private_data['render'].admin.aside(private_data)
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">分类管理</h3>
+                <div class="card-tools">
+                    <a id="deleteBatch" href="#" name="categories" class="btn btn-sm btn-default floatRight add-and-delete">删除</a>
+                    <a href="$make_url('/categories/add')" class="btn btn-sm btn-success floatRight add-and-delete">新增</a>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>缩略图</th>
+                        <th>名称</th>
+                        <th>父类</th>
+                        <th>描述</th>
+                        <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    $for i in private_data['category_list']:
+                        <tr>
+                            <td class="mailbox-name">$i.id</td>
+                            <td class="mailbox-name">
+                                <img src="data:image/jpeg;base64,$i.thumbnail" style="height:17px;width:30px;"/>
+                            </td>
+                            <td class="mailbox-name">$i.name</td>
+                            $if i.id == 1:
+                                <td class="mailbox-name">无</td>
+                                <td class="mailbox-name" style="text-align:left;">无</td>
+                            $elif i.id == 2 or i.id ==3 or i.id ==4:
+                                <td class="mailbox-name">$i.parent.name</td>
+                                <td class="mailbox-name" style="text-align:left;">$i.description</td>
+                            $elif i.id != 1:
+                                <td class="mailbox-name">$i.parent.name</td>
+                                <td class="mailbox-name" style="text-align:left;">$i.description</td>
+                            <td class="mailbox-name">
+                                $if i.id != 1:
+                                    <a href="#"name="/categories/delete?id=" onclick="deleteConfirm(name,$i.id)" title="删除">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                $else:
+                                     <a href="#" title="禁止删除">
+                                         <i class="admin-operation  fa fa-faucet"></i>
+                                     </a>
+                                <a href="$make_url('/categories/show',{'id':i.id})"  title="编辑">
+                                    <i class="fa fa-wrench"></i>
+                                </a> &nbsp;
+                            </td>
+                        </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+                <div class="card-footer">
+                    <div class="card-tools">
+                  <ul class="pagination pagination-sm float-right">
+                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                  </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+$:private_data['render'].admin.foot(private_data)
+</body>
+
