@@ -21,3 +21,7 @@ webpyCMS是基于web.py的网站内容管理系统，小巧实用，非常适合
 
 6、截图
 
+![Image text](https://raw.githubusercontent.com/colinshin/webpyCMS/master/static/images/one.png)
+
+![Image text](https://raw.githubusercontent.com/colinshin/webpyCMS/master/static/images/two.png)
+
