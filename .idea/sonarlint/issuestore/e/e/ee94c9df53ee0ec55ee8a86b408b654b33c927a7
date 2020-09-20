@@ -1,17 +1,17 @@
 
+]javascript:S1481Ğ";Remove the declaration of the unused 'tableWidth' variable.(ÕÒöœÿÿÿÿÿ
+Yjavascript:S1481Ñ"=Remove the declaration of the unused 'columnWidths' variable.(¥áÂQ
+Tjavascript:S1854œ	"2Remove this useless assignment to variable "data".(£Ö²ïüÿÿÿÿ
 \javascript:S21370"ADo not use "undefined" to declare a parameter - use another name.(à›œB
-Ojavascript:S1117ª"-'idx' is already declared in the upper scope.(ÏÙÂÙÿÿÿÿÿ
-Njavascript:S1117î"1'details' is already declared in the upper scope.(å¥Ø
+Rjavascript:S1117¹"0'column' is already declared in the upper scope.(…Ë²øÿÿÿÿ
 Njavascript:S1117"1'details' is already declared in the upper scope.(­Í¬˜
 Hjavascript:S1117È"+'i' is already declared in the upper scope.(àıË™
-Rjavascript:S1481µ"5Remove the declaration of the unused 'calc' variable.(éŒ¸¾
-Rjavascript:S1117¹"0'column' is already declared in the upper scope.(…Ë²øÿÿÿÿ
 Vjavascript:S1481à"4Remove the declaration of the unused 'row' variable.(·î­äÿÿÿÿÿ
-Sjavascript:S1854à"1Remove this useless assignment to variable "row".(·î­äÿÿÿÿÿ
-Mjavascript:S1117•"+'i' is already declared in the upper scope.(Ÿ˜Ì©øÿÿÿÿ
-]javascript:S1481Ğ";Remove the declaration of the unused 'tableWidth' variable.(ÕÒöœÿÿÿÿÿ
-Zjavascript:S1854Ğ"8Remove this useless assignment to variable "tableWidth".(ÕÒöœÿÿÿÿÿ
-Yjavascript:S1481Ñ"=Remove the declaration of the unused 'columnWidths' variable.(¥áÂQ
+Njavascript:S1117î"1'details' is already declared in the upper scope.(å¥Ø
 Vjavascript:S1854Ñ":Remove this useless assignment to variable "columnWidths".(¥áÂQ
+Rjavascript:S1481µ"5Remove the declaration of the unused 'calc' variable.(éŒ¸¾
 Wjavascript:S1481œ	"5Remove the declaration of the unused 'data' variable.(£Ö²ïüÿÿÿÿ
-Tjavascript:S1854œ	"2Remove this useless assignment to variable "data".(£Ö²ïüÿÿÿÿ
+Mjavascript:S1117•"+'i' is already declared in the upper scope.(Ÿ˜Ì©øÿÿÿÿ
+Zjavascript:S1854Ğ"8Remove this useless assignment to variable "tableWidth".(ÕÒöœÿÿÿÿÿ
+Ojavascript:S1117ª"-'idx' is already declared in the upper scope.(ÏÙÂÙÿÿÿÿÿ
+Sjavascript:S1854à"1Remove this useless assignment to variable "row".(·î­äÿÿÿÿÿ

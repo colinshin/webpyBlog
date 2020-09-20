@@ -1,19 +1,19 @@
 
-CWeb:BoldAndItalicTagsCheck""Replace this <i> tag by <em>.(ìÑì
-CWeb:BoldAndItalicTagsCheck%"Replace this <i> tag by <em>.(€ŒÏ
 CWeb:BoldAndItalicTagsCheck&"Replace this <i> tag by <em>.(Ã¸Òğ
-CWeb:BoldAndItalicTagsCheck'"Replace this <i> tag by <em>.(Üı«¬
-HWeb:BoldAndItalicTagsCheck;"Replace this <i> tag by <em>.(Ìõæ–ıÿÿÿÿ
-HWeb:BoldAndItalicTagsCheck?"Replace this <i> tag by <em>.(š´«Ïøÿÿÿÿ
+CWeb:BoldAndItalicTagsCheck%"Replace this <i> tag by <em>.(€ŒÏ
+CWeb:BoldAndItalicTagsCheck""Replace this <i> tag by <em>.(ìÑì
 D	Web:S1827C"/Remove this deprecated "frameborder" attribute.(Ô¦üø
-B	Web:S1827C"-Remove this deprecated "scrolling" attribute.(Ô¦üø
+G	Web:S1827G"-Remove this deprecated "scrolling" attribute.(ºıµÿøÿÿÿÿ
+CWeb:BoldAndItalicTagsCheck'"Replace this <i> tag by <em>.(Üı«¬
+XWeb:FrameWithoutTitleCheckG"-Add a "title" attribute to this <iframe> tag.(ºıµÿøÿÿÿÿ
+CWeb:BoldAndItalicTagsCheckï"Replace this <i> tag by <em>.(æéÆG
+HWeb:BoldAndItalicTagsCheck?"Replace this <i> tag by <em>.(š´«Ïøÿÿÿÿ
+HWeb:BoldAndItalicTagsCheck;"Replace this <i> tag by <em>.(Ìõæ–ıÿÿÿÿ
+IWeb:BoldAndItalicTagsCheckî"Replace this <i> tag by <em>.(¼­ÓÆúÿÿÿÿ
+MWeb:BoldAndItalicTagsCheck´"!Replace this <b> tag by <strong>.(‹‰Ììùÿÿÿÿ
 SWeb:FrameWithoutTitleCheckC"-Add a "title" attribute to this <iframe> tag.(Ô¦üø
 D	Web:S1827E"/Remove this deprecated "frameborder" attribute.(şóùº
+B	Web:S1827C"-Remove this deprecated "scrolling" attribute.(Ô¦üø
+I	Web:S1827G"/Remove this deprecated "frameborder" attribute.(ºıµÿøÿÿÿÿ
 B	Web:S1827E"-Remove this deprecated "scrolling" attribute.(şóùº
 SWeb:FrameWithoutTitleCheckE"-Add a "title" attribute to this <iframe> tag.(şóùº
-I	Web:S1827G"/Remove this deprecated "frameborder" attribute.(ºıµÿøÿÿÿÿ
-G	Web:S1827G"-Remove this deprecated "scrolling" attribute.(ºıµÿøÿÿÿÿ
-XWeb:FrameWithoutTitleCheckG"-Add a "title" attribute to this <iframe> tag.(ºıµÿøÿÿÿÿ
-IWeb:BoldAndItalicTagsCheckî"Replace this <i> tag by <em>.(¼­ÓÆúÿÿÿÿ
-CWeb:BoldAndItalicTagsCheckï"Replace this <i> tag by <em>.(æéÆG
-MWeb:BoldAndItalicTagsCheck´"!Replace this <b> tag by <strong>.(‹‰Ììùÿÿÿÿ

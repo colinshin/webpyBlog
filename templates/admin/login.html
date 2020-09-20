@@ -1,220 +1,65 @@
-$def with (privData)
+$def with (private_data)
 <!DOCTYPE html>
 <head>
 <title>登录</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><!--按IE最高版本-->
-<link rel="stylesheet" type="text/css" href="$staticUrl('common/admin/mainCss.css')"/>
-<script type="text/javascript" src="$staticUrl('common/jquery/jquery-1.9.1.min.js')"></script>
-<script type="text/javascript" src="$staticUrl('common/admin/jquery.easing.1.3.js')"></script>
-<script type="text/javascript" src="$staticUrl('common/admin/shake.js')"></script>
-<script src="$staticUrl('common/layer-v2.4/layer.js')"></script>
-<style>
-body{background-color:#1d73b0;}                        
-.land_bg{ position:absolute; height:100%; width:100%; z-index:-10; min-height:340px; min-width:630px;}
-.hd_info{  height:30px; width:200px; color:#7ebdee; font-size:10px; position:absolute; right:30px; top:10px; z-index:10; }
-.hd_info li{ float:right; padding:5px;}
-.hd_info li a{color:#7ebdee; font-size:12px;}
-.hd_info li a:hover{ color:#FFF;}
-.land_man{ display:block; position:absolute; height:100%; width:100%; z-index:1; background:transparent;}
-.land_content{ height:130px; width:610px; position:relative; z-index:10;margin:300px auto;}
-.land_logo{ display:block; width:500px; height:53px; padding-bottom:20px; background:url($staticUrl('common/images/land_logo.png')) no-repeat;}
-#land_shake{width:100%; position:relative;}
-.land_form{position:relative; z-index:3;}
-.land_form input{ border: medium none; float:left; font-size:16px; font-weight:bold; color:#6d6f71; line-height:34px \9; _line-height:34px; }
-.user_div{ display:block; width:177px; height:34px; _height:34px; _overflow:hidden; padding:10px 20px 10px 50px; float:left;background:url($staticUrl('common/images/user_input.png')) no-repeat;}
-.user_input{display:block; width:177px; height:34px; background:url($staticUrl('common/images/user_input0.gif')) no-repeat;}
-.psod_div{ display:block; width:177px; height:34px;  _height:34px; _overflow:hidden; padding:10px 20px 10px 50px; float:left;background:url($staticUrl('common/images/psod_input.png')) no-repeat; background-color: transparent; }
-.psod_input{display:block; width:177px; height:34px;  background:url($staticUrl('common/images/psod_input0.gif')) no-repeat;}
-.land_form .submit_land{ display:block; width:113px; height:54px; float:right; cursor:pointer;background:url($staticUrl('common/images/submit_land.png')) no-repeat;}
-.land_prompt{ height:0px; width:100%; position:relative; z-index:2;}
-.land_prompt_error{  height:0px; width:228px; padding:8px 20px 0 30px; position:absolute;left:171px; margin:0 auto;background:url($staticUrl('common/images/land_prompt.png')) no-repeat;top:-50px;opacity:0;filter:'alpha(opacity=0)';filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;}
-.land_prompt_error img{ float:left; padding-top:3px; padding-right:10px;}
-.land_prompt_error .pTxt{ float:left; height:40px; width:171px; font-size:15px; overflow:hidden;}
-.pTxt .txt,.pTxt .bug{display: inline-block;vertical-align: middle;*display:inline;zoom:1;}
-.pTxt .txt{ line-height:20px;}
-.pTxt .bug{height: 100%;width: 1px;}
-.init-div h3{font-size:1.4rem;text-align:center;margin:15px 0;color:#FF0033;}
-.init-div a{font-size:1.2rem;text-align:center;margin:15px 0;display:block;margin-top:40px;}
-</style>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><!--按IE最高版本-->
+<link href="$static_url('lib/AdminLTE/plugins/fontawesome-free/css/all.min.css')" rel="stylesheet">
+<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')" rel="stylesheet">
+<link href="$static_url('lib/AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css')" rel="stylesheet">
+<link href="$static_url('lib/AdminLTE/dist/css/adminlte.min.css')" rel="stylesheet">
 </head>
-<body>
-<div class="land_man">
-	<div class="land_content">
-		<div class="land_logo"></div>
-        <form class="land_form"  action="$makeUrl('/login/check')" method="post" name="gxcms"  id="iform">
-        	<div id="land_shake">
-            	<div class="user_div">
-        			<input tabindex="1" class="user_input" id="user_input1" name="username" type="text" onfocus="input01_onfocus(this)" onblur="input01_onblur(this)" value="" />
-                </div>
-                <div class="psod_div">
-        			<input tabindex="2" class="psod_input" id="psod_input1" name="password" type="password" onfocus="input01_onfocus(this)" onblur="input01_onblur(this)" value="" />
-                </div>
-            	<input class="submit_land" type="button" value="" onclick="login()" />
-
-                <input  type="submit" class="hidden-btn" id="submit-btn" style="display:none;"/>
-            </div>
-        </form>
-        <div class="land_prompt">
-        	<div class="land_prompt_error">
-            	<img src="$staticUrl('common/images/land_prompt_ico01.gif')"/>
-                <div class="pTxt">
-                	<p id="txt" class="txt">登录名或密码错误</p>
-                    <p class="bug"></p>
-                </div>
-            </div>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <!-- /.login-logo -->
+    $if private_data["error_msg"]:
+        <div class="alert alert-danger" role="alert">
+          $:private_data["error_msg"]
         </div>
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">登    录</p>
+      <form  action="$make_url('/admin/login')" id="iform" method="POST"  name="gxcms">
+        <div class="input-group mb-3">
+          <input class="form-control" name="username" placeholder="输入账号" required type="text">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input class="form-control" name="password" placeholder="Password" required type="password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input id="remember" type="checkbox">
+              <label for="remember">
+                Remember Me
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button class="btn btn-primary btn-block" type="submit">Sign In</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
     </div>
+    <!-- /.login-card-body -->
+  </div>
 </div>
-<div id="particles" style="display:none;width:100%;height:100%;"></div>
-<div id="browser" style="display:none; width:100%; height:60px;  text-align:center; background:#ed2024; color:#FFF; position:absolute; top:0; z-index:1000000; font-size:16px; overflow:hidden;">
-<P style="width:600px; height:60px; background:#ed2024; color:#FFF; margin:10px auto 0 auto;">您的浏览器版本过低，将会影响正常使用，请及时升级版本<br />建议升级到&nbsp;IE最新版本&nbsp;或更>
-换<a href="http://www.firefox.com.cn/" style="font-weight:bold" >火狐</a>、<a href="http://www.google.cn/intl/zh-CN/chrome/browser/" style="font-weight:bold" >谷歌</a>等主流浏览器</P>
-</div>
-<script type="text/javascript">
-    function goform(){
-      document.getElementById("submit-btn").click();
-    }
-    var hideTimerO;
-	/*登陆方法*/
-    function login(){
-		var username = document.gxcms.username.value;
-		var password = document.gxcms.password.value;
-		if (username == "" || username == null) {
-			jQuery("#txt").text('账号不能为空');
-            jQuery(".land_prompt_error").css({'height':'50px'}).animate({top:'+'+80+'px',opacity: 1},800, 'easeOutBounce');
-            clearTimeout(hideTimerO);
-            hideTimerO = setTimeout(function(){
-                jQuery(".land_prompt_error").animate({opacity: 0},800,function(){jQuery(".land_prompt_error").css({'top':'-50px','height':'0'})});
-            },2600);
-                     
-            flash('#land_shake',15,4,70);
-			document.gxcms.username.focus();
-			return false;
-		}
-		if (password == "" || password == null) {
-			jQuery("#txt").text('密码不能为空');
-            jQuery(".land_prompt_error").css({'height':'50px'}).animate({top:'+'+80+'px',opacity: 1},800, 'easeOutBounce');
-            clearTimeout(hideTimerO);
-            hideTimerO = setTimeout(function(){
-                jQuery(".land_prompt_error").animate({opacity: 0},800,function(){jQuery(".land_prompt_error").css({'top':'-50px','height':'0'})});
-            },2600);
-                     
-            flash('#land_shake',15,4,70);
-			document.gxcms.password.focus();
-			return false;
-		}
-		
-        jQuery.ajax({
-			type:"post",
-			url:"/api/check",
-			data:jQuery("#iform").serialize(),
-			dataType:"json",
-			success:function(data,textStatus){
-				jQuery("#submit-btn").click(); 
-			},
-			error:function(XMLHttpRequest, textStatus, errorThrown){
-                var errorType = String(XMLHttpRequest.status);
-                console.log(typeof errorType);
-                console.log('====='+errorType);
-                if(errorType == "401"){
-                    console.log('>>>>>>>>>>>>>>');
-                    layer.open({
-                        type: 1,
-                        title: false,
-                        area: ['250px', '120px'],
-                        closeBtn: 0,
-                        shadeClose: true,
-                        skin: 'layui-layer-molv',
-                        content: '<div class="init-div"><h3>数据未初始化</h3><a href="/install/install" target="_blank">现在初始化</a></div>'
-                    });
-                }else if(errorType == "400"){
-                    jQuery("#txt").text('账号或密码错误');
-                    jQuery(".land_prompt_error").css({'height':'50px'}).animate({top:'+'+80+'px',opacity: 1},800, 'easeOutBounce');
-                    clearTimeout(hideTimerO);
-                    hideTimerO = setTimeout(function(){
-                        jQuery(".land_prompt_error").animate({opacity: 0},800,function(){jQuery(".land_prompt_error").css({'top':'-50px','height':'0'})});
-                    },2600);
-                    flash('#land_shake',15,4,70);
-                }else{
-                    alert('未知错误');
-                }
-			}
-		});
-    }
-	/*回车事件*/
-    document.onkeydown = function () {
-        if (window.event && window.event.keyCode == 13) {
-            login();
-        }
-    }
-    /*背景提示文字*/
-    function backCheck(){
-        var u = document.getElementById('user_input1') ;
-        var p = document.getElementById('psod_input1') ;
-        if (u.value !=''){
-            u.parentNode.style.backgroundPosition="0px -108px";
-            u.style.backgroundPosition="0px -108px";
-        }
-        if (p.value !=''){
-            p.parentNode.style.backgroundPosition="0px -108px";
-            p.style.backgroundPosition="0px -108px";
-        }
-    };
-    var secs =5; //次数
-    function backCount() {
-       for (var i = secs; i >= 0; i--) {
-           window.setTimeout('backCheck()', 1000);
-       }
-    }
-
-    window.onload=function()
-    {
-       backCheck();
-       backCount();
-    };
-    /*背景提示文字 end*/
-    var down_time=0;
-    jQuery(function(){
-        jQuery('.land_logo').mousedown(function(){
-           down_time=new Date().getTime();
-    });
-
-    jQuery('.land_logo').mouseup(function(){
-       var up_time = new Date().getTime();
-        if(up_time-down_time>2000){
-            if(jQuery('#particles').is(':hidden')){
-                jQuery('#particles').particleground({dotColor: '#5cbdaa',lineColor: '#5cbdaa'});
-                jQuery('.intro').css({'margin-top': -(jQuery('.intro').height() / 2)})
-                jQuery('#particles').show();
-            }else{
-                //location.href=location.href;
-            }
-         }
-       });
-
-   });
-
-	jQuery(document).ready(function () {
-		if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0") {
-			jQuery("#browser").show();
-		} else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE7.0") {
-			jQuery("#browser").show();
-		}
-	});
-	function input01_onfocus(t) {
-		t.parentNode.style.backgroundPosition = "0px -54px";
-		t.style.backgroundPosition = "0px -54px";
-
-	}
-	function input01_onblur(s) {
-		s.parentNode.style.backgroundPosition = "0px -108px";
-		s.style.backgroundPosition = "0px -108px";
-		if (s.value == '') {
-			s.style.backgroundPosition = "0px 0px";
-			s.parentNode.style.backgroundPosition = "0px 0px";
-		}
-	}
-</script>
+<script src="$static_url('lib/AdminLTE/plugins/jquery/jquery.min.js')"></script>
+<!-- Bootstrap 4 -->
+<script src="$static_url('lib/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js')"></script>
+<!-- AdminLTE App -->
+<script src="$static_url('lib/AdminLTE/dist/js/adminlte.min.js')"></script>
 </body>
 </html>

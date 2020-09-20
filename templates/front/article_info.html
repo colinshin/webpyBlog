@@ -34,7 +34,7 @@ $:private_data['render'].front.page_header(private_data)
 
                 <div class="row mt-2 bgc">
                         <div class="article-body">
-                           $:private_data['article'].content
+                           $:htmlunquote(private_data['article'].content)
                         </div>
                 </div>
             </div>

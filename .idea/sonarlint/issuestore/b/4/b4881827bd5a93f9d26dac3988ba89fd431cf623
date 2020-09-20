@@ -1,16 +1,16 @@
 
-Gjavascript:S1117W"+'$' is already declared in the upper scope.(éÈ„±
-Ljavascript:S1117c"+'$' is already declared in the upper scope.(›ĞŠòúÿÿÿÿ
-Tjavascript:S1117­"2'instance' is already declared in the upper scope.(ÍïÜ¼ûÿÿÿÿ
-Hjavascript:S1117Ú"+'$' is already declared in the upper scope.(éÈ„±
-Rjavascript:S1117È"0'Slider' is already declared in the upper scope.(ˆôôáøÿÿÿÿ
-Njavascript:S1117§"1'element' is already declared in the upper scope.(¿½áÎ
-Njavascript:S1117§"1'optName' is already declared in the upper scope.(¿½áÎ
-mjavascript:S1117§"K'createAndAppendTooltipSubElements' is already declared in the upper scope.(º‘ÄÌøÿÿÿÿ
 kjavascript:S1871İ
 "NThis branch's code block is the same as the block for the branch on line 1371.(Ô­Ó“
+cjavascript:S1126å"AReplace this if-then-else statement by a single return statement.(èåø…ÿÿÿÿÿ
+Tjavascript:S1117­"2'instance' is already declared in the upper scope.(ÍïÜ¼ûÿÿÿÿ
+Ljavascript:S1117c"+'$' is already declared in the upper scope.(›ĞŠòúÿÿÿÿ
 kjavascript:S1871ù
 "NThis branch's code block is the same as the block for the branch on line 1399.(Ô­Ó“
-cjavascript:S1126å"AReplace this if-then-else statement by a single return statement.(èåø…ÿÿÿÿÿ
+mjavascript:S1117§"K'createAndAppendTooltipSubElements' is already declared in the upper scope.(º‘ÄÌøÿÿÿÿ
+Njavascript:S1117§"1'element' is already declared in the upper scope.(¿½áÎ
+Gjavascript:S1117W"+'$' is already declared in the upper scope.(éÈ„±
 ]javascript:S3516¢";Refactor this function to not always return the same value.(Ú’¯áÿÿÿÿÿ
+Rjavascript:S1117È"0'Slider' is already declared in the upper scope.(ˆôôáøÿÿÿÿ
+Hjavascript:S1117Ú"+'$' is already declared in the upper scope.(éÈ„±
 ]javascript:S3516Ğ";Refactor this function to not always return the same value.(„ô¢şüÿÿÿÿ
+Njavascript:S1117§"1'optName' is already declared in the upper scope.(¿½áÎ

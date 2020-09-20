@@ -1,10 +1,10 @@
 
-Hjavascript:S1117ô"+'n' is already declared in the upper scope.(Ó‹¦‚
 Qjavascript:S1854»"/Remove this useless assignment to variable "v".(ì¤¦€ûÿÿÿÿ
 Ljavascript:S1854Æ"/Remove this useless assignment to variable "v".(üËîâ
-Ojavascript:S1117¹"-'sum' is already declared in the upper scope.(ííŸÿÿÿÿÿÿ
 ]javascript:S1126ê"AReplace this if-then-else statement by a single return statement.(çÑï
 Qjavascript:S3782“"4Change this argument to the documented type: Number.(¢¥ÐÛ
+Hjavascript:S1117ô"+'n' is already declared in the upper scope.(Ó‹¦‚
+Ojavascript:S1117¹"-'sum' is already declared in the upper scope.(ííŸÿÿÿÿÿÿ
+€javascript:S4165Ÿ"cReview this useless assignment: "check" already holds the assigned value along all execution paths.(„–¾É
 |javascript:S4165Æ"_Review this useless assignment: "v" already holds the assigned value along all execution paths.(üËîâ
 €javascript:S4165¢"cReview this useless assignment: "check" already holds the assigned value along all execution paths.(„–¾É
-€javascript:S4165Ÿ"cReview this useless assignment: "check" already holds the assigned value along all execution paths.(„–¾É

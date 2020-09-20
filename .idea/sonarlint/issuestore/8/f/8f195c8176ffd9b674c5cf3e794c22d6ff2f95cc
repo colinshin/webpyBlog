@@ -1,27 +1,27 @@
 
-Cpython:S1481­"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-lpython:S101L"PRename class "jsonEncoder" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.( ê‹èúÿÿÿÿ
-Cpython:S1481â"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481Ê"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Apython:S1481İ")Remove the unused local variable "image".(œïÍW
-Cpython:S1481¥"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481Ô"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481€"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Bpython:S1481H"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481´"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481â"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
 Bpython:S1481?"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481ö"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481Â"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481¬"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-7python:S125ı"Remove this commented out code.(™ÊÎœ
-Ppython:S1144Ú"7Remove this unused class-private '__image_uuid' method.(ÍÆ€å
-Cpython:S1481º"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-Cpython:S1481•"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481Ê"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
 Cpython:S1481 "%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481­"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
 Cpython:S1481Š"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-dpython:S2208"GImport only needed names or import the module and then use its members.(êãĞéûÿÿÿÿ
-Cpython:S1481"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481ö"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
 Cpython:S1481¸"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481´"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481Ô"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+dpython:S2208"GImport only needed names or import the module and then use its members.(êãĞéûÿÿÿÿ
+Cpython:S1481¬"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481Â"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Bpython:S1481H"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481â"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481º"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481€"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+7python:S125ı"Remove this commented out code.(™ÊÎœ
+Cpython:S1481•"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481¥"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+lpython:S101L"PRename class "jsonEncoder" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.( ê‹èúÿÿÿÿ
+Ppython:S1144Ú"7Remove this unused class-private '__image_uuid' method.(ÍÆ€å
+Cpython:S1481"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Cpython:S1481â"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
+Apython:S1481İ")Remove the unused local variable "image".(œïÍW

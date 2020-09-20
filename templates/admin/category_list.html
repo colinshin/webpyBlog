@@ -11,13 +11,16 @@ $:private_data['render'].admin.aside(private_data)
     <div class="content-header">
       <div class="container-fluid">
         <div class="row">
+            $if private_data["create_success"]:
+                <div class="alert alert-success" role="alert">
+                  创建成功！
+                </div>
             <div class="col-md-12 col-lg-12">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">分类管理</h3>
                 <div class="card-tools">
-                    <a id="deleteBatch" href="#" name="categories" class="btn btn-sm btn-default floatRight add-and-delete">删除</a>
-                    <a href="$make_url('/categories/add')" class="btn btn-sm btn-success floatRight add-and-delete">新增</a>
+                    <a href="$make_url('/admin/create_category')" class="btn btn-sm btn-success floatRight add-and-delete">新增</a>
                 </div>
               </div>
               <!-- /.card-header -->
@@ -53,14 +56,14 @@ $:private_data['render'].admin.aside(private_data)
                             <td class="mailbox-name">
                                 $if i.id != 1:
                                     <a href="#"name="/categories/delete?id=" onclick="deleteConfirm(name,$i.id)" title="删除">
-                                        <i class="fa fa-trash"></i>
+                                        <img src="/static/lib/bootstrap-icons-1.0.0/trash-fill.svg" alt="" width="20" height="20" title="删除">
                                     </a>
                                 $else:
                                      <a href="#" title="禁止删除">
                                          <i class="admin-operation  fa fa-faucet"></i>
                                      </a>
-                                <a href="$make_url('/categories/show',{'id':i.id})"  title="编辑">
-                                    <i class="fa fa-wrench"></i>
+                                <a href="$make_url('update_category',{'category_id':i.id})"  title="编辑">
+                                    <img src="/static/lib/bootstrap-icons-1.0.0/pencil-square.svg" alt="" width="20" height="20" title="编辑">
                                 </a> &nbsp;
                             </td>
                         </tr>

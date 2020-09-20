@@ -1,110 +1,101 @@
-$def with (privData)
+$def with (private_data)
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <head>
-$:privData['render'].header(privData)
-<script charset="utf-8" src="$staticUrl('common/kindeditor/kindeditor-all.js')"></script>
-<script charset="utf-8" src="$staticUrl('common/kindeditor/lang/zh-CN.js')"></script>
-<script src="$staticUrl('common/lychee-upload/upload.js')" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="$staticUrl('common/lychee-upload/upload.css')">
-<link href="$staticUrl('common/lychee-upload/iconfont/iconfont.css')" media="all" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>创建文章</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="$static_url('lib/AdminLTE/plugins/fontawesome-free/css/all.min.css')">
+    <!-- Ionicons -->
+    <link rel="stylesheet"
+          href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')">
+    <!-- Theme style -->
+    <link rel="stylesheet"
+          href="$static_url('lib/AdminLTE/dist/css/adminlte.min.css')">
+    <!-- summernote -->
+    <link rel="stylesheet"
+          href="$static_url('lib/AdminLTE/plugins/summernote/summernote-bs4.css')">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+          rel="stylesheet">
+    $:private_data['render'].admin.header(private_data)
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
-$:privData['render'].pageheader(privData)
-<div class="col-md-12 p5-nav-bar">
-    <div class="col-sm-12">
-        <a href="$makeUrl('/index')">
-            <span class="glyphicon glyphicon-home"></span>
-            <span>首页</span>
-        </a>&gt;&gt;
-        <span>媒体管理</span>&gt;
-        <a href="$makeUrl('/articles')"><span>文章列表</span></a>&gt;
-        <a href="$makeUrl('/articles/add')"><span>新增文章</span></a>
-    </div>
-</div>
-<section class="content">
-    <div class="row">
-      <div class="has-max">
-        <div class="col-md-12 col-lg-12">
-            <div class="box box-info">
-                <div class="box-header with-border">
-                    <h3 class="box-title">新增文章</h3>
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="glyphicon glyphicon-minus"></i></button>
+<body class="hold-transition sidebar-mini layout-fixed">
+$:private_data['render'].admin.aside(private_data)
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-outline card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    创建文章
+                                </h3>
+                            </div>
+                            <div class="card-body pad">
+                                <form action="$make_url('create_article')" method="POST">
+                                    <div class="form-group">
+                                        <label for="name">标题</label>
+                                        <input type="name" class="form-control"
+                                               id="name" name="name"
+                                               placeholder="分类名称">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>分类</label>
+                                        <select class="form-control select2"
+                                                style="width: 100%;" name="category_id">
+                                            $for category in private_data["category_list"]:
+                                                <option value="$:category.id">
+                                                    $:category.name
+                                                </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="keywords">关键字</label>
+                                        <input type="text" name="keywords"
+                                               class="form-control"
+                                               id="keywords" placeholder="关键字">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="summary">简介</label>
+                                        <textarea class="textarea"
+                                                  name="summary" id="summary"
+                                                  placeholder="Place some text here"
+                                                  style="width: 100%; height: 600px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>详情</label>
+                                        <textarea class="textarea"
+                                                  name="content"
+                                                  placeholder="Place some text here"
+                                                  style="width: 100%; height: 600px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                    </div>
+                                    <button type="submit"
+                                            class="btn btn-success pull-right">
+                                        保存
+                                    </button>
+                                </form>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="box-body" style="display:block;">
-                    <form id="formvalidate" action="/articles/save" encType="multipart/form-data" method="post" class="form-horizontal">
-                        <div class="form-group">
-                           <label for="category" class="col-md-offset-1 col-md-2 control-label col-lg-1">* 分类:</label>
-                            <div class="col-md-7 col-lg-8">
-                                <select name="category" id="category" class="form-control">
-                                    $for item in privData['CATEGORIES_LIST']:
-                                    <option value="$:item.id"
-                                        $if item.id == 1:
-                                            selected="selected"
-                                    >$:item.name</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="name" class="col-md-offset-1 col-md-2 control-label col-lg-1">* 标题:</label>
-                            <div class="col-md-7 col-lg-8">
-                                <input name="name" type="text" id="name" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                           <label for="name" class="col-md-offset-1 col-md-2 control-label col-lg-1">* 缩略图:</label>
-                            <div class="col-md-7 col-lg-8">
-                                <input type="file" name="file" id="file" class="lychee-file" value="" accept="image/*"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="summary" class="col-md-offset-1 col-md-2 control-label col-lg-1">* 简介:</label>
-                            <div class="col-md-7 col-lg-8">
-                                <textarea name="summary"  id="summary" class="form-control"  /></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="content" class="col-md-offset-1 col-md-2 control-label col-lg-1">&nbsp;&nbsp;内容:</label>
-                            <div class="col-md-7 col-lg-8">
-                                <textarea rows="10" cols="5" name="content" id="content" class="form-control"></textarea>
-                                <script type="text/javascript">
-                                    KindEditor.ready(function(K) {  
-                                    window.editor = K.create('#content', {  
-                                    afterBlur: function(){  
-                                    this.sync();  
-                                    },  
-                                    uploadJson : '/upload/kindImage',  
-                                    resizeType : 0,  
-                                    width: '665px',  
-                                    height: '400px',  
-                                    items: ['preview', '|', 'undo', 'redo', '|', 'template', 'code', 'cut', 'copy', 'paste',  
-                                        'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',  
-                                        'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',  
-                                        'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',  
-                                        'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',  
-                                        'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image',   
-                                        'table', 'hr', 'emoticons', 'baidumap', 'pagebreak', 'anchor', 'link', 'unlink'],
-                                     imageUploadJson:'/upload/kindUrls'     
-                                         });  
-                                    });  
-                                </script>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-10 col-lg-10">
-                                <button type="submit" name="submit" class="btn btn-info pull-right" id="submits" onmouseover="instance.post();">保存</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            </section>
         </div>
-      </div>
     </div>
-</section>
-$:privData['render'].foot(privData)
-<script src="$staticUrl('common/admin/admin.validate.min.js')"></script>
+</div>
+$:private_data['render'].admin.foot(private_data)
 </body>
 </html>

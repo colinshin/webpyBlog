@@ -1,231 +1,231 @@
 
-Njavascript:S1117R"-'key' is already declared in the upper scope.(ÇÜ¿øÿÿÿÿ
-ajavascript:S905s"FExpected an assignment or function call and instead saw an expression.(¹Ùöğ
-gjavascript:S905ƒ"FExpected an assignment or function call and instead saw an expression.(¦Ã¢ úÿÿÿÿ
-Xjavascript:S1481Î"6Remove the declaration of the unused 'proto' variable.(ÌüøÁıÿÿÿÿ
-Ujavascript:S1854Î"3Remove this useless assignment to variable "proto".(ÌüøÁıÿÿÿÿ
-Yjavascript:S1481ü"<Remove the declaration of the unused 'appendChild' variable.(Â¡ß±
-Vjavascript:S1854ü"9Remove this useless assignment to variable "appendChild".(Â¡ß±
-Vjavascript:S1481•"9Remove the declaration of the unused 'toString' variable.(êåã
-Sjavascript:S1854•"6Remove this useless assignment to variable "toString".(êåã
-]javascript:S1481–";Remove the declaration of the unused 'fillString' variable.(Ê®Ûİúÿÿÿÿ
-Zjavascript:S1854–"8Remove this useless assignment to variable "fillString".(Ê®Ûİúÿÿÿÿ
-Xjavascript:S1481˜"6Remove the declaration of the unused 'paper' variable.(•­¡¿úÿÿÿÿ
-Rjavascript:S1481™"5Remove the declaration of the unused 'push' variable.(¶Å§¥
-Ojavascript:S1854™"2Remove this useless assignment to variable "push".(¶Å§¥
-Rjavascript:S1481š"6Remove the declaration of the unused 'ISURL' variable.(ÙÕÙA
 Ojavascript:S1854š"3Remove this useless assignment to variable "ISURL".(ÙÕÙA
-Yjavascript:S1481Ÿ"=Remove the declaration of the unused 'setAttribute' variable.(ûİ£\
-Vjavascript:S1854Ÿ":Remove this useless assignment to variable "setAttribute".(ûİ£\
-]javascript:S1481â";Remove the declaration of the unused 'whitespace' variable.(¦¸ò§şÿÿÿÿ
-Zjavascript:S1854â"8Remove this useless assignment to variable "whitespace".(¦¸ò§şÿÿÿÿ
-]javascript:S1481é"@Remove the declaration of the unused 'radial_gradient' variable.(Ëáë±
-Zjavascript:S1854é"=Remove this useless assignment to variable "radial_gradient".(Ëáë±
-\javascript:S1481ë":Remove the declaration of the unused 'sortByKey' variable.(ôœ¬‚şÿÿÿÿ
-Yjavascript:S1854ë"7Remove this useless assignment to variable "sortByKey".(ôœ¬‚şÿÿÿÿ
-Mjavascript:S1117ë"+'b' is already declared in the upper scope.(ôœ¬‚şÿÿÿÿ
-Mjavascript:S1117î"+'b' is already declared in the upper scope.(ö°şƒùÿÿÿÿ
-Qjavascript:S1481ñ"4Remove the declaration of the unused 'fun' variable.(ÈóØ¤
-Njavascript:S1854ñ"1Remove this useless assignment to variable "fun".(ÈóØ¤
-Mjavascript:S1117¬"+'i' is already declared in the upper scope.(íÀ¡ûÿÿÿÿ
-Qjavascript:S1854Ë"/Remove this useless assignment to variable "d".(üÍº‚úÿÿÿÿ
-Hjavascript:S1117Û"+'i' is already declared in the upper scope.(Ü¢Øß
-]javascript:S1481ò";Remove the declaration of the unused 'createUUID' variable.(£Š–Úıÿÿÿÿ
-Zjavascript:S1854ò"8Remove this useless assignment to variable "createUUID".(£Š–Úıÿÿÿÿ
-Qjavascript:S1117š"/'color' is already declared in the upper scope.(”†²²úÿÿÿÿ
-Hjavascript:S1117¥"+'i' is already declared in the upper scope.(ºä¸
-Qjavascript:S1117©"/'color' is already declared in the upper scope.(”†²²úÿÿÿÿ
-Hjavascript:S1117¹"+'g' is already declared in the upper scope.(§¿«ô
-Hjavascript:S1117¹"+'b' is already declared in the upper scope.(§¿«ô
-Mjavascript:S1117Í"+'g' is already declared in the upper scope.(ëçéøÿÿÿÿ
-Mjavascript:S1117Í"+'b' is already declared in the upper scope.(ëçéøÿÿÿÿ
-Mjavascript:S1117ª"+'R' is already declared in the upper scope.(ùØÓøúÿÿÿÿ
-Mjavascript:S1117Ó"+'R' is already declared in the upper scope.(ùØÓøúÿÿÿÿ
-Hjavascript:S1117ï"+'g' is already declared in the upper scope.(ãƒ—¯
-Hjavascript:S1117ï"+'b' is already declared in the upper scope.(ãƒ—¯
-Mjavascript:S1117õ"+'S' is already declared in the upper scope.(ñú„€ûÿÿÿÿ
-Hjavascript:S1117‘"+'g' is already declared in the upper scope.(ŸÅÒ©
-Hjavascript:S1117‘"+'b' is already declared in the upper scope.(ŸÅÒ©
-Mjavascript:S1117—"+'S' is already declared in the upper scope.(ã¡Ï¾üÿÿÿÿ
-Qjavascript:S1117©"/'array' is already declared in the upper scope.(õöå¹şÿÿÿÿ
-Mjavascript:S1117ª"+'i' is already declared in the upper scope.(µœœ¸ûÿÿÿÿ
-Zjavascript:S1481À"8Remove the declaration of the unused 'preload' variable.(û´Ğøÿÿÿÿ
-Wjavascript:S1854À"5Remove this useless assignment to variable "preload".(û´Ğøÿÿÿÿ
-Qjavascript:S1481ö"4Remove the declaration of the unused 'res' variable.(®Ç˜Ï
-Hjavascript:S1117À"+'b' is already declared in the upper scope.(Ä¢òñ
-Mjavascript:S1117Ü"+'g' is already declared in the upper scope.(ú—‰µùÿÿÿÿ
-Mjavascript:S1117Ü"+'b' is already declared in the upper scope.(ú—‰µùÿÿÿÿ
-Qjavascript:S1117İ"/'round' is already declared in the upper scope.(¦»çñşÿÿÿÿ
-Hjavascript:S1117€	"+'d' is already declared in the upper scope.(”’ƒˆ
-Hjavascript:S1117	"+'i' is already declared in the upper scope.(Ãéå
-Mjavascript:S1117¾	"+'b' is already declared in the upper scope.(¼“–üÿÿÿÿÿ
-Hjavascript:S1117Á	"+'a' is already declared in the upper scope.(ğËß©
-Hjavascript:S1117Á	"+'b' is already declared in the upper scope.(ğËß©
-^javascript:S1481æ	"<Remove the declaration of the unused 'paramCounts' variable.(ÄüÆŠùÿÿÿÿ
-[javascript:S1854æ	"9Remove this useless assignment to variable "paramCounts".(ÄüÆŠùÿÿÿÿ
 Mjavascript:S1117ì	"+'b' is already declared in the upper scope.(°©ºúûÿÿÿÿ
-Wjavascript:S1481î	"5Remove the declaration of the unused 'name' variable.(Êª©èøÿÿÿÿ
-Tjavascript:S1854î	"2Remove this useless assignment to variable "name".(Êª©èøÿÿÿÿ
-Hjavascript:S1117ï	"+'a' is already declared in the upper scope.(ğËß©
-Hjavascript:S1117ï	"+'b' is already declared in the upper scope.(ğËß©
-Mjavascript:S1117ú	"+'i' is already declared in the upper scope.(¸üÛÌûÿÿÿÿ
-Mjavascript:S1117¡"+'i' is already declared in the upper scope.(ÒÍİëúÿÿÿÿ
-Hjavascript:S1117¼"+'i' is already declared in the upper scope.(éØ®Œ
-<javascript:S1481ø"Remove unused function 'inter'.(³şö¤
-Fjavascript:S1481û"$Remove unused function 'interCount'.(œÉøôşÿÿÿÿ
-Mjavascript:S1117Œ"+'i' is already declared in the upper scope.(¥Ôê§şÿÿÿÿ
-Mjavascript:S1117Ø"+'i' is already declared in the upper scope.(Ä´Ãıÿÿÿÿ
-Hjavascript:S1117Â"+'i' is already declared in the upper scope.(ŞËüÅ
-Mjavascript:S1117ÿ"+'i' is already declared in the upper scope.(¤ÆŞ„ùÿÿÿÿ
 rjavascript:S128‘"VEnd this switch case with an unconditional break, continue, return or throw statement.(®°á‹
-Qjavascript:S1854š"/Remove this useless assignment to variable "r".(ìÎÔÊşÿÿÿÿ
-Mjavascript:S1117Ò"+'i' is already declared in the upper scope.(çìÑÌúÿÿÿÿ
-rjavascript:S128ğ"VEnd this switch case with an unconditional break, continue, return or throw statement.(éÊÈµ
-rjavascript:S128"VEnd this switch case with an unconditional break, continue, return or throw statement.(éÊÈµ
-Mjavascript:S1117¯"+'x' is already declared in the upper scope.(ÀÁÒ°øÿÿÿÿ
-Mjavascript:S1117¯"+'y' is already declared in the upper scope.(ÀÁÒ°øÿÿÿÿ
-Ojavascript:S1117¯"-'rad' is already declared in the upper scope.(ÀÁÒ°øÿÿÿÿ
-Qjavascript:S1481»"4Remove the declaration of the unused 'cos' variable.(˜–ï
-Njavascript:S1854»"1Remove this useless assignment to variable "cos".(˜–ï
-Vjavascript:S1481¼"4Remove the declaration of the unused 'sin' variable.(±¬óıüÿÿÿÿ
-Sjavascript:S1854¼"1Remove this useless assignment to variable "sin".(±¬óıüÿÿÿÿ
-Hjavascript:S1117û"+'i' is already declared in the upper scope.(œ–ö¢
-Hjavascript:S1117Š"+'b' is already declared in the upper scope.(«™æÀ
-Pjavascript:S1117¼".'path' is already declared in the upper scope.(³’çŒúÿÿÿÿ
-Mjavascript:S1117¼"+'d' is already declared in the upper scope.(³’çŒúÿÿÿÿ
-Pjavascript:S1117¼".'pcom' is already declared in the upper scope.(³’çŒúÿÿÿÿ
-Mjavascript:S1117ô"+'i' is already declared in the upper scope.(Åº¥»üÿÿÿÿ
-Qjavascript:S1117"/'path2' is already declared in the upper scope.(£Ù¢¹üÿÿÿÿ
-Mjavascript:S1117"+'i' is already declared in the upper scope.(£Ù¢¹üÿÿÿÿ
-Mjavascript:S1117"+'i' is already declared in the upper scope.(¯ùÕªúÿÿÿÿ
-Wjavascript:S1481À":Remove the declaration of the unused 'parseDots' variable.(ÕíŒÑ
-Tjavascript:S1854À"7Remove this useless assignment to variable "parseDots".(ÕíŒÑ
-Hjavascript:S1117Â"+'i' is already declared in the upper scope.(‚äÁ 
-Mjavascript:S1117İ"+'d' is already declared in the upper scope.(Äö¹¥úÿÿÿÿ
-Qjavascript:S1117æ"/'paper' is already declared in the upper scope.(ğ€ÉÎşÿÿÿÿ
-Ujavascript:S1481ì"8Remove the declaration of the unused 'tofront' variable.(‘§©İ
-Rjavascript:S1854ì"5Remove this useless assignment to variable "tofront".(‘§©İ
-Ljavascript:S1117ì"/'paper' is already declared in the upper scope.(‘§©İ
+Mjavascript:S1117“*"+'i' is already declared in the upper scope.(ÈÖ§ıÿÿÿÿ
+mjavascript:S1764¶@"KCorrect one of the identical sub-expressions on both sides of operator "=="(æ°Û·ùÿÿÿÿ
+ajavascript:S2259‚4"DTypeError can be thrown as "params" might be null or undefined here.(ˆõ¬Ÿ
 Yjavascript:S1481ö"7Remove the declaration of the unused 'toback' variable.(­ÍğÏûÿÿÿÿ
-Vjavascript:S1854ö"4Remove this useless assignment to variable "toback".(­ÍğÏûÿÿÿÿ
-Qjavascript:S1117ö"/'paper' is already declared in the upper scope.(­ÍğÏûÿÿÿÿ
-^javascript:S1481€"<Remove the declaration of the unused 'insertafter' variable.(ÒşÄöÿÿÿÿÿ
-[javascript:S1854€"9Remove this useless assignment to variable "insertafter".(ÒşÄöÿÿÿÿÿ
-Qjavascript:S1117€"/'paper' is already declared in the upper scope.(ÒşÄöÿÿÿÿÿ
-Zjavascript:S1481ˆ"=Remove the declaration of the unused 'insertbefore' variable.(½ö±ú
-Wjavascript:S1854ˆ":Remove this useless assignment to variable "insertbefore".(½ö±ú
-Ljavascript:S1117ˆ"/'paper' is already declared in the upper scope.(½ö±ú
-`javascript:S1481µ">Remove the declaration of the unused 'transformPath' variable.(ÂÀ¥¾øÿÿÿÿ
-]javascript:S1854µ";Remove this useless assignment to variable "transformPath".(ÂÀ¥¾øÿÿÿÿ
-Hjavascript:S1117Ç"+'i' is already declared in the upper scope.(¯é°
-Mjavascript:S1117³"+'i' is already declared in the upper scope.(É¨ÛÖøÿÿÿÿ
-Hjavascript:S1117"+'b' is already declared in the upper scope.(Öúà–
-Hjavascript:S1117"+'d' is already declared in the upper scope.(Öúà–
-Hjavascript:S1117“"+'b' is already declared in the upper scope.(¿ª¦î
+gjavascript:S905ƒ"FExpected an assignment or function call and instead saw an expression.(¦Ã¢ úÿÿÿÿ
+Vjavascript:S1481•"9Remove the declaration of the unused 'toString' variable.(êåã
+Hjavascript:S1117¹"+'b' is already declared in the upper scope.(§¿«ô
+Pjavascript:S1854Â9"3Remove this useless assignment to variable "attrs".(«¨Ş 
+wjavascript:S128Ÿ/"VEnd this switch case with an unconditional break, continue, return or throw statement.(Âªòçúÿÿÿÿ
+Ojavascript:S1117¯"-'rad' is already declared in the upper scope.(ÀÁÒ°øÿÿÿÿ
 Hjavascript:S1117“"+'d' is already declared in the upper scope.(¿ª¦î
-Mjavascript:S1117´"+'b' is already declared in the upper scope.(ƒÈáÑúÿÿÿÿ
-Mjavascript:S1117´"+'d' is already declared in the upper scope.(ƒÈáÑúÿÿÿÿ
+Zjavascript:S1854â"8Remove this useless assignment to variable "whitespace".(¦¸ò§şÿÿÿÿ
+Hjavascript:S1117Á	"+'a' is already declared in the upper scope.(ğËß©
+Hjavascript:S1117¹"+'g' is already declared in the upper scope.(§¿«ô
+Hjavascript:S1117§("+'i' is already declared in the upper scope.(‡¾¥ñ
+Hjavascript:S1117‘("+'i' is already declared in the upper scope.(Çùá¤
+Mjavascript:S1117İ"+'d' is already declared in the upper scope.(Äö¹¥úÿÿÿÿ
+Ljavascript:S1854‰?"/Remove this useless assignment to variable "e".(šĞ´î
+Tjavascript:S1481ö="2Remove the declaration of the unused 's' variable.(‰€ÆŒúÿÿÿÿ
+Yjavascript:S1481Å9"7Remove the declaration of the unused 'oindex' variable.(œÏ”İÿÿÿÿÿ
+Pjavascript:S1117è!".'that' is already declared in the upper scope.(ºÕûÉúÿÿÿÿ
+Mjavascript:S1117ï%"+'i' is already declared in the upper scope.(ÈÖ§ıÿÿÿÿ
+Mjavascript:S1117ë"+'b' is already declared in the upper scope.(ôœ¬‚şÿÿÿÿ
+Hjavascript:S1117ï	"+'a' is already declared in the upper scope.(ğËß©
+Mjavascript:S1117î"+'b' is already declared in the upper scope.(ö°şƒùÿÿÿÿ
+Sjavascript:S1481Â9"6Remove the declaration of the unused 'attrs' variable.(«¨Ş 
+Qjavascript:S1117©"/'color' is already declared in the upper scope.(”†²²úÿÿÿÿ
+Hjavascript:S1117ï"+'b' is already declared in the upper scope.(ãƒ—¯
+Qjavascript:S1854ç<"/Remove this useless assignment to variable "a".(¾µâîüÿÿÿÿ
+Hjavascript:S1117ï"+'g' is already declared in the upper scope.(ãƒ—¯
+Hjavascript:S1117È&"+'i' is already declared in the upper scope.(¡ãóœ
+Hjavascript:S1117‘"+'g' is already declared in the upper scope.(ŸÅÒ©
 Mjavascript:S1117®"+'i' is already declared in the upper scope.(‚õ‡êûÿÿÿÿ
-Hjavascript:S1117°"+'i' is already declared in the upper scope.(ÛŠ¶Ö
-Mjavascript:S1117è"+'i' is already declared in the upper scope.(ûÖ€òùÿÿÿÿ
-Mjavascript:S1117ˆ"+'i' is already declared in the upper scope.(Áˆ‚ˆıÿÿÿÿ
-Mjavascript:S1117ú"0'events' is already declared in the upper scope.(†˜´«
+<javascript:S1481ø"Remove unused function 'inter'.(³şö¤
+Rjavascript:S1854ì"5Remove this useless assignment to variable "tofront".(‘§©İ
+ajavascript:S2589ß$"?This always evaluates to falsy. Consider refactoring this code.(­œ¢äûÿÿÿÿ
+]javascript:S1854µ";Remove this useless assignment to variable "transformPath".(ÂÀ¥¾øÿÿÿÿ
+Rjavascript:S1481™"5Remove the declaration of the unused 'push' variable.(¶Å§¥
+Zjavascript:S1481ˆ"=Remove the declaration of the unused 'insertbefore' variable.(½ö±ú
+Mjavascript:S1117ÿ"+'i' is already declared in the upper scope.(¤ÆŞ„ùÿÿÿÿ
+Mjavascript:S1117—"+'S' is already declared in the upper scope.(ã¡Ï¾üÿÿÿÿ
+Pjavascript:S1117¼".'path' is already declared in the upper scope.(³’çŒúÿÿÿÿ
+Hjavascript:S1117ò'"+'i' is already declared in the upper scope.(ÒÙ‘•
+rjavascript:S128ß."VEnd this switch case with an unconditional break, continue, return or throw statement.(¦›²Ğ
+Tjavascript:S1481”?"7Remove the declaration of the unused 'errors' variable.(–ÙÔ‘
+Mjavascript:S1117¯"+'y' is already declared in the upper scope.(ÀÁÒ°øÿÿÿÿ
+Zjavascript:S1854–"8Remove this useless assignment to variable "fillString".(Ê®Ûİúÿÿÿÿ
+Tjavascript:S1854î	"2Remove this useless assignment to variable "name".(Êª©èøÿÿÿÿ
+Xjavascript:S1481˜"6Remove the declaration of the unused 'paper' variable.(•­¡¿úÿÿÿÿ
+Hjavascript:S1117†("+'i' is already declared in the upper scope.(˜‹ÿ
+^javascript:S1481€"<Remove the declaration of the unused 'insertafter' variable.(ÒşÄöÿÿÿÿÿ
+rjavascript:S128ã."VEnd this switch case with an unconditional break, continue, return or throw statement.(ú‚Ô
+Vjavascript:S1854Ÿ":Remove this useless assignment to variable "setAttribute".(ûİ£\
+Hjavascript:S1117Û"+'i' is already declared in the upper scope.(Ü¢Øß
+Wjavascript:S1854À"5Remove this useless assignment to variable "preload".(û´Ğøÿÿÿÿ
+Zjavascript:S1854ò"8Remove this useless assignment to variable "createUUID".(£Š–Úıÿÿÿÿ
 Hjavascript:S1117¨"+'i' is already declared in the upper scope.(“™üš
 Mjavascript:S1117”"+'i' is already declared in the upper scope.(Š§çÿÿÿÿÿ
-Mjavascript:S1117¿"+'i' is already declared in the upper scope.(‡ø­¡ıÿÿÿÿ
-Zjavascript:S1854®"8Remove this useless assignment to variable "pathString".(Ä¥×ùÿÿÿÿ
-Ljavascript:S1117õ"/'paper' is already declared in the upper scope.(³ªøÆ
-:javascript:S1481é"Remove unused function 'x_y'.(¢á†ş
-Hjavascript:S1117ä"+'i' is already declared in the upper scope.(øıûÜ
-`javascript:S1481ğ">Remove the declaration of the unused 'curveslengths' variable.(éŞ¶’şÿÿÿÿ
-Hjavascript:S1117ı"+'i' is already declared in the upper scope.(ŞËüÅ
 Njavascript:S1117 "1'getPath' is already declared in the upper scope.(¼èÏÇ
-Ojavascript:S1481˜!"2Remove the declaration of the unused 't' variable.(à¢¿
-Ljavascript:S1854˜!"/Remove this useless assignment to variable "t".(à¢¿
-Hjavascript:S1117¹!"+'i' is already declared in the upper scope.(Æ§Ÿ
-Cjavascript:S1515Ì!"'Define this function outside of a loop.(Í¿Œ)
-Gjavascript:S1117Ì!"+'i' is already declared in the upper scope.(Í¿Œ)
-Pjavascript:S1117è!".'that' is already declared in the upper scope.(ºÕûÉúÿÿÿÿ
-Ojavascript:S1481¤""2Remove the declaration of the unused 'x' variable.(¿õÌš
-Ojavascript:S1481¤""2Remove the declaration of the unused 'y' variable.(¿õÌš
-Hjavascript:S1117¦""+'i' is already declared in the upper scope.(ô¨«
-Hjavascript:S1117º""+'t' is already declared in the upper scope.(à”û¿
-Hjavascript:S1117¾""+'t' is already declared in the upper scope.(÷€‹ˆ
-Hjavascript:S1117Â""+'i' is already declared in the upper scope.(ÕšÁª
-Vjavascript:S1481§#"9Remove the declaration of the unused 'percents' variable.(©Ö¯¹
-Mjavascript:S1117À#"+'i' is already declared in the upper scope.( ó—Ûÿÿÿÿÿ
-ajavascript:S2589ß$"?This always evaluates to falsy. Consider refactoring this code.(­œ¢äûÿÿÿÿ
-Mjavascript:S1117–%"+'i' is already declared in the upper scope.(ûëã£ùÿÿÿÿ
-Mjavascript:S1117ï%"+'i' is already declared in the upper scope.(ÈÖ§ıÿÿÿÿ
-Mjavascript:S1117–&"+'i' is already declared in the upper scope.(ÈÀ¦úÿÿÿÿ
-Mjavascript:S1117ª&"+'i' is already declared in the upper scope.(ÈÀ¦úÿÿÿÿ
-Mjavascript:S1117À&"+'i' is already declared in the upper scope.(ÈÀ¦úÿÿÿÿ
-Qjavascript:S1117Ç&"/'paper' is already declared in the upper scope.(ù‹’üÿÿÿÿ
-Hjavascript:S1117È&"+'i' is already declared in the upper scope.(¡ãóœ
 Hjavascript:S1117Ø&"+'i' is already declared in the upper scope.(öÁŞ¬
+Mjavascript:S1117ê'"+'i' is already declared in the upper scope.(Î¤ŠÙıÿÿÿÿ
+Hjavascript:S1117¹!"+'i' is already declared in the upper scope.(Æ§Ÿ
+Gjavascript:S1117Ì!"+'i' is already declared in the upper scope.(Í¿Œ)
+Mjavascript:S1117´"+'b' is already declared in the upper scope.(ƒÈáÑúÿÿÿÿ
+Mjavascript:S1117ô"+'i' is already declared in the upper scope.(Åº¥»üÿÿÿÿ
+Tjavascript:S1481ç<"2Remove the declaration of the unused 'a' variable.(¾µâîüÿÿÿÿ
+Hjavascript:S1117Â""+'i' is already declared in the upper scope.(ÕšÁª
+Hjavascript:S1117€	"+'d' is already declared in the upper scope.(”’ƒˆ
+Hjavascript:S1117Ç"+'i' is already declared in the upper scope.(¯é°
+Qjavascript:S1117İ"/'round' is already declared in the upper scope.(¦»çñşÿÿÿÿ
+Mjavascript:S1117ú"0'events' is already declared in the upper scope.(†˜´«
+Zjavascript:S1854®"8Remove this useless assignment to variable "pathString".(Ä¥×ùÿÿÿÿ
+:javascript:S1481é"Remove unused function 'x_y'.(¢á†ş
+Cjavascript:S1515Ì!"'Define this function outside of a loop.(Í¿Œ)
+5javascript:S2814A"'ii' is already defined.(ùá©Ú
+Mjavascript:S1117¿"+'i' is already declared in the upper scope.(‡ø­¡ıÿÿÿÿ
+Mjavascript:S1117Í"+'b' is already declared in the upper scope.(ëçéøÿÿÿÿ
 Hjavascript:S1117ë&"+'i' is already declared in the upper scope.(ÈÚİ
+Hjavascript:S1117"+'d' is already declared in the upper scope.(Öúà–
+Hjavascript:S1117Š"+'b' is already declared in the upper scope.(«™æÀ
+Ojavascript:S1481¤""2Remove the declaration of the unused 'y' variable.(¿õÌš
+Tjavascript:S1481×<"2Remove the declaration of the unused 'a' variable.(¾µâîüÿÿÿÿ
+Mjavascript:S1117Œ"+'i' is already declared in the upper scope.(¥Ôê§şÿÿÿÿ
+Ljavascript:S1854˜!"/Remove this useless assignment to variable "t".(à¢¿
+Ojavascript:S1481‰?"2Remove the declaration of the unused 'e' variable.(šĞ´î
+Hjavascript:S1117	"+'i' is already declared in the upper scope.(Ãéå
+Wjavascript:S1481À":Remove the declaration of the unused 'parseDots' variable.(ÕíŒÑ
+Mjavascript:S1117Í"+'g' is already declared in the upper scope.(ëçéøÿÿÿÿ
+Hjavascript:S1117³("+'g' is already declared in the upper scope.(Â¢Í»
+Njavascript:S1117©@",'ii' is already declared in the upper scope.(²Ê†êûÿÿÿÿ
+Mjavascript:S1117À&"+'i' is already declared in the upper scope.(ÈÀ¦úÿÿÿÿ
+Vjavascript:S1481§#"9Remove the declaration of the unused 'percents' variable.(©Ö¯¹
+Hjavascript:S1117“"+'b' is already declared in the upper scope.(¿ª¦î
+Mjavascript:S1117Ü"+'b' is already declared in the upper scope.(ú—‰µùÿÿÿÿ
+Ijavascript:S1117©/",'el' is already declared in the upper scope.(­Ö…®
+Njavascript:S1854¬4"1Remove this useless assignment to variable "svg".(™ø©Ò
+Mjavascript:S1117©@"+'i' is already declared in the upper scope.(²Ê†êûÿÿÿÿ
+ajavascript:S2259œ"?TypeError can be thrown as "p" might be null or undefined here.(¬Õ´Âşÿÿÿÿ
+[javascript:S1854€"9Remove this useless assignment to variable "insertafter".(ÒşÄöÿÿÿÿÿ
+Mjavascript:S1117–&"+'i' is already declared in the upper scope.(ÈÀ¦úÿÿÿÿ
+Rjavascript:S1481 7"5Remove the declaration of the unused 'dxdy' variable.(µÁ¿ù
+\javascript:S1481ë":Remove the declaration of the unused 'sortByKey' variable.(ôœ¬‚şÿÿÿÿ
+Qjavascript:S1117€"/'paper' is already declared in the upper scope.(ÒşÄöÿÿÿÿÿ
+Ujavascript:S1481æ7"3Remove the declaration of the unused 'xy' variable.(¼·«·ùÿÿÿÿ
+Ljavascript:S1117¦@"/'names' is already declared in the upper scope.(ÀÖÈ‘
+Qjavascript:S1117š"/'color' is already declared in the upper scope.(”†²²úÿÿÿÿ
+Mjavascript:S1117ú	"+'i' is already declared in the upper scope.(¸üÛÌûÿÿÿÿ
+Ujavascript:S1481ì"8Remove the declaration of the unused 'tofront' variable.(‘§©İ
+Wjavascript:S1481î	"5Remove the declaration of the unused 'name' variable.(Êª©èøÿÿÿÿ
 Hjavascript:S1117'"+'i' is already declared in the upper scope.(‡¾¥ñ
 Hjavascript:S1117¦'"+'i' is already declared in the upper scope.(‡¾¥ñ
-Mjavascript:S1117Ê'"+'i' is already declared in the upper scope.(Ä¬Öúşÿÿÿÿ
-Mjavascript:S1117ê'"+'i' is already declared in the upper scope.(Î¤ŠÙıÿÿÿÿ
-Hjavascript:S1117ò'"+'i' is already declared in the upper scope.(ÒÙ‘•
-Hjavascript:S1117†("+'i' is already declared in the upper scope.(˜‹ÿ
-Hjavascript:S1117‘("+'i' is already declared in the upper scope.(Çùá¤
-Hjavascript:S1117§("+'i' is already declared in the upper scope.(‡¾¥ñ
-Hjavascript:S1117³("+'g' is already declared in the upper scope.(Â¢Í»
-]javascript:S3516ä(";Refactor this function to not always return the same value.(¬†©çüÿÿÿÿ
-Mjavascript:S1117®)"+'i' is already declared in the upper scope.(¯µåØüÿÿÿÿ
+Vjavascript:S1854ö"4Remove this useless assignment to variable "toback".(­ÍğÏûÿÿÿÿ
+rjavascript:S128ù."VEnd this switch case with an unconditional break, continue, return or throw statement.(íÒÊ´
+Ujavascript:S1854Î"3Remove this useless assignment to variable "proto".(ÌüøÁıÿÿÿÿ
+Qjavascript:S1481»"4Remove the declaration of the unused 'cos' variable.(˜–ï
+Yjavascript:S1854ë"7Remove this useless assignment to variable "sortByKey".(ôœ¬‚şÿÿÿÿ
+Ljavascript:S1117õ"/'paper' is already declared in the upper scope.(³ªøÆ
 Rjavascript:S1117Ì)"0'string' is already declared in the upper scope.(è´Ùûÿÿÿÿ
-Mjavascript:S1117İ)"+'i' is already declared in the upper scope.(ìúøÔüÿÿÿÿ
-Mjavascript:S1117“*"+'i' is already declared in the upper scope.(ÈÖ§ıÿÿÿÿ
+Zjavascript:S1481Ä9"8Remove the declaration of the unused 'opacity' variable.(¬ÄË½ùÿÿÿÿ
+Tjavascript:S1481?"2Remove the declaration of the unused 'f' variable.(èÑË™ıÿÿÿÿ
+rjavascript:S128"VEnd this switch case with an unconditional break, continue, return or throw statement.(éÊÈµ
+Mjavascript:S1117ª"+'R' is already declared in the upper scope.(ùØÓøúÿÿÿÿ
+Mjavascript:S1117À#"+'i' is already declared in the upper scope.( ó—Ûÿÿÿÿÿ
+Mjavascript:S1117Ü"+'g' is already declared in the upper scope.(ú—‰µùÿÿÿÿ
+Mjavascript:S1117õ"+'S' is already declared in the upper scope.(ñú„€ûÿÿÿÿ
+Hjavascript:S1117¥"+'i' is already declared in the upper scope.(ºä¸
+Njavascript:S1854ß>"1Remove this useless assignment to variable "fun".(ÈóØ¤
+Hjavascript:S1117Â"+'i' is already declared in the upper scope.(ŞËüÅ
+Yjavascript:S1481Ÿ"=Remove the declaration of the unused 'setAttribute' variable.(ûİ£\
+Qjavascript:S1481¬4"4Remove the declaration of the unused 'svg' variable.(™ø©Ò
+Mjavascript:S1117Ø"+'i' is already declared in the upper scope.(Ä´Ãıÿÿÿÿ
+Mjavascript:S1117Ò"+'i' is already declared in the upper scope.(çìÑÌúÿÿÿÿ
+Mjavascript:S1117ˆ"+'i' is already declared in the upper scope.(Áˆ‚ˆıÿÿÿÿ
+^javascript:S1481æ	"<Remove the declaration of the unused 'paramCounts' variable.(ÄüÆŠùÿÿÿÿ
+Hjavascript:S1117º""+'t' is already declared in the upper scope.(à”û¿
+Hjavascript:S1117Â"+'i' is already declared in the upper scope.(‚äÁ 
+Mjavascript:S1117³"+'i' is already declared in the upper scope.(É¨ÛÖøÿÿÿÿ
 Hjavascript:S1117³*"+'i' is already declared in the upper scope.(Ä’…œ
-Ojavascript:S1117Ô*"-'all' is already declared in the upper scope.(Ë†»Ôüÿÿÿÿ
-Rjavascript:S1117›+"0'loaded' is already declared in the upper scope.(³ªœ­üÿÿÿÿ
 ajavascript:S905·+"FExpected an assignment or function call and instead saw an expression.(™ç·3
-wjavascript:S128Ö."VEnd this switch case with an unconditional break, continue, return or throw statement.(Çİœùÿÿÿÿÿ
-rjavascript:S128ß."VEnd this switch case with an unconditional break, continue, return or throw statement.(¦›²Ğ
-rjavascript:S128ã."VEnd this switch case with an unconditional break, continue, return or throw statement.(ú‚Ô
+Sjavascript:S1117ô6"1'command' is already declared in the upper scope.(ãµ¦øÿÿÿÿ
+Ljavascript:S1117ì"/'paper' is already declared in the upper scope.(‘§©İ
+‰javascript:S2583îA"lChange this condition so that it does not always evaluate to "true"; some subsequent code is never executed.(Ã®öõ
+Pjavascript:S1117¼".'pcom' is already declared in the upper scope.(³’çŒúÿÿÿÿ
+Qjavascript:S1854×<"/Remove this useless assignment to variable "a".(¾µâîüÿÿÿÿ
+]javascript:S1481é"@Remove the declaration of the unused 'radial_gradient' variable.(Ëáë±
+Qjavascript:S1854Ë"/Remove this useless assignment to variable "d".(üÍº‚úÿÿÿÿ
+Hjavascript:S1117ä"+'i' is already declared in the upper scope.(øıûÜ
+Mjavascript:S1117ª"+'i' is already declared in the upper scope.(µœœ¸ûÿÿÿÿ
+Mjavascript:S1117®)"+'i' is already declared in the upper scope.(¯µåØüÿÿÿÿ
+Ojavascript:S1117Ô*"-'all' is already declared in the upper scope.(Ë†»Ôüÿÿÿÿ
+Hjavascript:S1117ı"+'i' is already declared in the upper scope.(ŞËüÅ
+Vjavascript:S1481¼"4Remove the declaration of the unused 'sin' variable.(±¬óıüÿÿÿÿ
+Hjavascript:S1117ï	"+'b' is already declared in the upper scope.(ğËß©
+Qjavascript:S1117"/'path2' is already declared in the upper scope.(£Ù¢¹üÿÿÿÿ
+Ojavascript:S1481¤""2Remove the declaration of the unused 'x' variable.(¿õÌš
+Mjavascript:S1117ª&"+'i' is already declared in the upper scope.(ÈÀ¦úÿÿÿÿ
 rjavascript:S128ì."VEnd this switch case with an unconditional break, continue, return or throw statement.(ïÍ×ğ
 wjavascript:S128õ."VEnd this switch case with an unconditional break, continue, return or throw statement.(ÜçÚ‹ÿÿÿÿÿ
-rjavascript:S128ù."VEnd this switch case with an unconditional break, continue, return or throw statement.(íÒÊ´
-ljavascript:S1871ı."JThis case's code block is the same as the block for the case on line 5991.(­ï­òüÿÿÿÿ
-wjavascript:S128Ÿ/"VEnd this switch case with an unconditional break, continue, return or throw statement.(Âªòçúÿÿÿÿ
-Ijavascript:S1117©/",'el' is already declared in the upper scope.(­Ö…®
-wjavascript:S128ß/"VEnd this switch case with an unconditional break, continue, return or throw statement.(²åÒÎüÿÿÿÿ
-Tjavascript:S1481¦0"2Remove the declaration of the unused 'X' variable.(Í»š„ûÿÿÿÿ
 Tjavascript:S1481§0"2Remove the declaration of the unused 'Y' variable.(Œ†¼Úøÿÿÿÿ
-Qjavascript:S1481¬4"4Remove the declaration of the unused 'svg' variable.(™ø©Ò
-Njavascript:S1854¬4"1Remove this useless assignment to variable "svg".(™ø©Ò
-ajavascript:S905Ó6"FExpected an assignment or function call and instead saw an expression.(™ç·3
-Sjavascript:S1117ô6"1'command' is already declared in the upper scope.(ãµ¦øÿÿÿÿ
-Ojavascript:S1117÷6"-'res' is already declared in the upper scope.(­ëÓÇúÿÿÿÿ
-Rjavascript:S1481 7"5Remove the declaration of the unused 'dxdy' variable.(µÁ¿ù
-Ujavascript:S1481æ7"3Remove the declaration of the unused 'xy' variable.(¼·«·ùÿÿÿÿ
+Qjavascript:S1117æ"/'paper' is already declared in the upper scope.(ğ€ÉÎşÿÿÿÿ
+Njavascript:S1854»"1Remove this useless assignment to variable "cos".(˜–ï
+Yjavascript:S1481ü"<Remove the declaration of the unused 'appendChild' variable.(Â¡ß±
+Hjavascript:S1117Á	"+'b' is already declared in the upper scope.(ğËß©
+Hjavascript:S1117û"+'i' is already declared in the upper scope.(œ–ö¢
+Mjavascript:S1117¡"+'i' is already declared in the upper scope.(ÒÍİëúÿÿÿÿ
+Qjavascript:S1117ö"/'paper' is already declared in the upper scope.(­ÍğÏûÿÿÿÿ
+]javascript:S1481–";Remove the declaration of the unused 'fillString' variable.(Ê®Ûİúÿÿÿÿ
+Hjavascript:S1117¾""+'t' is already declared in the upper scope.(÷€‹ˆ
+Rjavascript:S1117›+"0'loaded' is already declared in the upper scope.(³ªœ­üÿÿÿÿ
 Qjavascript:S1854½8"5Remove this useless assignment to variable "newfill".(Òz
-Sjavascript:S1481Â9"6Remove the declaration of the unused 'attrs' variable.(«¨Ş 
-Pjavascript:S1854Â9"3Remove this useless assignment to variable "attrs".(«¨Ş 
-Zjavascript:S1481Ä9"8Remove the declaration of the unused 'opacity' variable.(¬ÄË½ùÿÿÿÿ
-Yjavascript:S1481Å9"7Remove the declaration of the unused 'oindex' variable.(œÏ”İÿÿÿÿÿ
-Tjavascript:S1481×<"2Remove the declaration of the unused 'a' variable.(¾µâîüÿÿÿÿ
-Qjavascript:S1854×<"/Remove this useless assignment to variable "a".(¾µâîüÿÿÿÿ
-Tjavascript:S1481ç<"2Remove the declaration of the unused 'a' variable.(¾µâîüÿÿÿÿ
-Qjavascript:S1854ç<"/Remove this useless assignment to variable "a".(¾µâîüÿÿÿÿ
-Tjavascript:S1481ö="2Remove the declaration of the unused 's' variable.(‰€ÆŒúÿÿÿÿ
-Qjavascript:S1481ß>"4Remove the declaration of the unused 'fun' variable.(ÈóØ¤
-Njavascript:S1854ß>"1Remove this useless assignment to variable "fun".(ÈóØ¤
-Ojavascript:S1481‰?"2Remove the declaration of the unused 'e' variable.(šĞ´î
-Ljavascript:S1854‰?"/Remove this useless assignment to variable "e".(šĞ´î
-Tjavascript:S1481?"2Remove the declaration of the unused 'f' variable.(èÑË™ıÿÿÿÿ
-Tjavascript:S1481”?"7Remove the declaration of the unused 'errors' variable.(–ÙÔ‘
+Mjavascript:S1117¬"+'i' is already declared in the upper scope.(íÀ¡ûÿÿÿÿ
 Kjavascript:S1117¥@".'name' is already declared in the upper scope.(Û£•Æ
-Ljavascript:S1117¦@"/'names' is already declared in the upper scope.(ÀÖÈ‘
-Mjavascript:S1117©@"+'i' is already declared in the upper scope.(²Ê†êûÿÿÿÿ
-Njavascript:S1117©@",'ii' is already declared in the upper scope.(²Ê†êûÿÿÿÿ
-mjavascript:S1764¶@"KCorrect one of the identical sub-expressions on both sides of operator "=="(æ°Û·ùÿÿÿÿ
-4javascript:S2814A"'i' is already defined.(ùá©Ú
-5javascript:S2814A"'ii' is already defined.(ùá©Ú
+Mjavascript:S1117¯"+'x' is already declared in the upper scope.(ÀÁÒ°øÿÿÿÿ
+ljavascript:S1871ı."JThis case's code block is the same as the block for the case on line 5991.(­ï­òüÿÿÿÿ
+Zjavascript:S1854é"=Remove this useless assignment to variable "radial_gradient".(Ëáë±
+Ojavascript:S1481˜!"2Remove the declaration of the unused 't' variable.(à¢¿
 bjavascript:S905îA"FExpected an assignment or function call and instead saw an expression.(Ã®öõ
-ajavascript:S2259œ"?TypeError can be thrown as "p" might be null or undefined here.(¬Õ´Âşÿÿÿÿ
+Wjavascript:S1854ˆ":Remove this useless assignment to variable "insertbefore".(½ö±ú
+]javascript:S3516ä(";Refactor this function to not always return the same value.(¬†©çüÿÿÿÿ
+Mjavascript:S1117´"+'d' is already declared in the upper scope.(ƒÈáÑúÿÿÿÿ
+Vjavascript:S1854ü"9Remove this useless assignment to variable "appendChild".(Â¡ß±
+Qjavascript:S1117©"/'array' is already declared in the upper scope.(õöå¹şÿÿÿÿ
+ajavascript:S905s"FExpected an assignment or function call and instead saw an expression.(¹Ùöğ
+Tjavascript:S1481¦0"2Remove the declaration of the unused 'X' variable.(Í»š„ûÿÿÿÿ
+Rjavascript:S1481š"6Remove the declaration of the unused 'ISURL' variable.(ÙÕÙA
+Tjavascript:S1854À"7Remove this useless assignment to variable "parseDots".(ÕíŒÑ
+`javascript:S1481µ">Remove the declaration of the unused 'transformPath' variable.(ÂÀ¥¾øÿÿÿÿ
+wjavascript:S128Ö."VEnd this switch case with an unconditional break, continue, return or throw statement.(Çİœùÿÿÿÿÿ
+Qjavascript:S1481ñ"4Remove the declaration of the unused 'fun' variable.(ÈóØ¤
+Mjavascript:S1117¼"+'d' is already declared in the upper scope.(³’çŒúÿÿÿÿ
+Ljavascript:S1117ˆ"/'paper' is already declared in the upper scope.(½ö±ú
+Hjavascript:S1117°"+'i' is already declared in the upper scope.(ÛŠ¶Ö
+ajavascript:S905Ó6"FExpected an assignment or function call and instead saw an expression.(™ç·3
+`javascript:S1481ğ">Remove the declaration of the unused 'curveslengths' variable.(éŞ¶’şÿÿÿÿ
+4javascript:S2814A"'i' is already defined.(ùá©Ú
+wjavascript:S128ß/"VEnd this switch case with an unconditional break, continue, return or throw statement.(²åÒÎüÿÿÿÿ
+Zjavascript:S1481À"8Remove the declaration of the unused 'preload' variable.(û´Ğøÿÿÿÿ
+Ojavascript:S1854™"2Remove this useless assignment to variable "push".(¶Å§¥
+]javascript:S1481ò";Remove the declaration of the unused 'createUUID' variable.(£Š–Úıÿÿÿÿ
+Qjavascript:S1481ö"4Remove the declaration of the unused 'res' variable.(®Ç˜Ï
+Mjavascript:S1117İ)"+'i' is already declared in the upper scope.(ìúøÔüÿÿÿÿ
+Njavascript:S1117R"-'key' is already declared in the upper scope.(ÇÜ¿øÿÿÿÿ
+Hjavascript:S1117¼"+'i' is already declared in the upper scope.(éØ®Œ
+Qjavascript:S1117Ç&"/'paper' is already declared in the upper scope.(ù‹’üÿÿÿÿ
+Xjavascript:S1481Î"6Remove the declaration of the unused 'proto' variable.(ÌüøÁıÿÿÿÿ
+Mjavascript:S1117"+'i' is already declared in the upper scope.(¯ùÕªúÿÿÿÿ
+Hjavascript:S1117¦""+'i' is already declared in the upper scope.(ô¨«
+Sjavascript:S1854¼"1Remove this useless assignment to variable "sin".(±¬óıüÿÿÿÿ
+rjavascript:S128ğ"VEnd this switch case with an unconditional break, continue, return or throw statement.(éÊÈµ
+]javascript:S1481â";Remove the declaration of the unused 'whitespace' variable.(¦¸ò§şÿÿÿÿ
 ajavascript:S2259¢,"DTypeError can be thrown as "vector" might be null or undefined here.(×›Í
-ajavascript:S2259‚4"DTypeError can be thrown as "params" might be null or undefined here.(ˆõ¬Ÿ
-‰javascript:S2583îA"lChange this condition so that it does not always evaluate to "true"; some subsequent code is never executed.(Ã®öõ
+Mjavascript:S1117è"+'i' is already declared in the upper scope.(ûÖ€òùÿÿÿÿ
+Mjavascript:S1117¾	"+'b' is already declared in the upper scope.(¼“–üÿÿÿÿÿ
+Hjavascript:S1117À"+'b' is already declared in the upper scope.(Ä¢òñ
+Mjavascript:S1117"+'i' is already declared in the upper scope.(£Ù¢¹üÿÿÿÿ
+Qjavascript:S1481ß>"4Remove the declaration of the unused 'fun' variable.(ÈóØ¤
+Mjavascript:S1117Ê'"+'i' is already declared in the upper scope.(Ä¬Öúşÿÿÿÿ
+Sjavascript:S1854•"6Remove this useless assignment to variable "toString".(êåã
+[javascript:S1854æ	"9Remove this useless assignment to variable "paramCounts".(ÄüÆŠùÿÿÿÿ
+Fjavascript:S1481û"$Remove unused function 'interCount'.(œÉøôşÿÿÿÿ
+Hjavascript:S1117‘"+'b' is already declared in the upper scope.(ŸÅÒ©
+Hjavascript:S1117"+'b' is already declared in the upper scope.(Öúà–
+Qjavascript:S1854š"/Remove this useless assignment to variable "r".(ìÎÔÊşÿÿÿÿ
+Ojavascript:S1117÷6"-'res' is already declared in the upper scope.(­ëÓÇúÿÿÿÿ
+Njavascript:S1854ñ"1Remove this useless assignment to variable "fun".(ÈóØ¤
+Mjavascript:S1117Ó"+'R' is already declared in the upper scope.(ùØÓøúÿÿÿÿ
+Mjavascript:S1117–%"+'i' is already declared in the upper scope.(ûëã£ùÿÿÿÿ

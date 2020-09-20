@@ -11,6 +11,7 @@ class ViewsAction(HtmlAction):
         HtmlAction.__init__(self, name)
         self.private_data = {
             'NAME': config.NAME,
+            'create_success': False,
         }
         print("*"*20)
         print(name)

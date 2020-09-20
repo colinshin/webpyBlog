@@ -16,7 +16,6 @@ $:private_data['render'].admin.aside(private_data)
               <div class="card-header">
                 <h3 class="card-title">分类管理</h3>
                 <div class="card-tools">
-                    <a id="deleteBatch" href="#" name="article" class="btn btn-default btn-sm floatRight add-and-delete">删除</a>
                     <a href="$make_url('/admin/create_article')" class="btn btn-success btn-sm floatRight add-and-delete">新增</a>
                 </div>
               </div>
@@ -44,10 +43,12 @@ $:private_data['render'].admin.aside(private_data)
                         <td class="mailbox-name">$i.category.name</td>
                         <td class="mailbox-name" style="text-align:left;">$i.name[:60]</td>
                         <td class="mailbox-name">
-                            <a href="$make_url('/articles/show',{'id':i.id})"  title="详情">
-                                <i class="fa fa-wrench"></i></a>&nbsp;
-                            <a href="#" name="/articles/delete?id=" onclick="deleteConfirm(name,$i.id)" title="删除">
-                                <i class="fa fa-trash"></i></a>
+                            <a href="$make_url('/articles/show',{'id':i.id})" onclick="deleteConfirm(name,$i.id)" title="详情">
+                                <img src="/static/lib/bootstrap-icons-1.0.0/trash-fill.svg" alt="" width="20" height="20" title="删除">
+                            </a>&nbsp;
+                            <a href="$make_url('update_article',{'article_id':i.id})"  title="编辑">
+                                <img src="/static/lib/bootstrap-icons-1.0.0/pencil-square.svg" alt="" width="20" height="20" title="编辑">
+                            </a>
                         </td>
                     </tr>
                   </tbody>
