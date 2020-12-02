@@ -22,6 +22,7 @@ class BaseAction(object):
             'htmlunescape': self.htmlunescape,
             'htmlunquote': self.htmlunquote,
             'is_login': self.is_login,
+            'get_page_str': self.get_page_str,
         }
 
         self.tmpl_dir = None
@@ -119,6 +120,9 @@ class BaseAction(object):
             return web.nomethod()
 
         return getattr(self.render, tmpl)(self.private_data)
+
+    def get_page_str(self):
+        return ''
 
 
 class HtmlAction(BaseAction):

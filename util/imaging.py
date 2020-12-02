@@ -4,7 +4,7 @@
 import os
 from io import StringIO
 from settings import config
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 
 class Imaging(object):
@@ -66,6 +66,40 @@ class Imaging(object):
                          config.THUMBNAIL_QUALITY,
                          config.THUMBNAIL_DPI)
 
+
+# 480x300
+def is_chinese(word):
+    for ch in word:
+        if '\u4e00' <= ch <= '\u9fff':
+            return True
+        return False
+
+
+def gen_font_image(char):
+    image = Image.new('RGBA', (480, 300), color="rgb(108,158,210)")
+    draw = ImageDraw.Draw(image)
+    str_len = 0
+    for s in char:
+        if is_chinese(s):
+            str_len += 2
+        else:
+            str_len += 1
+    str_length_half = str_len * 45 / 2
+    print("*" * 30 + char)
+    print(str_length_half)
+    start_x = 240 - str_length_half
+    print(start_x)
+    draw.text((start_x, 95), text=char, font=ImageFont.truetype('simhei.ttf', 90), fill='#ffffff', align="center")
+    return image
+
+
+if __name__ == '__main__':
+    size = 14
+    font = ImageFont.truetype('simhei.ttf', size)
+    hans = ["python", "html", "javascript", "nginx", "数据库"]
+    for han in hans:
+        image = gen_font_image(han)
+        image.save(str(hans.index(han)) + '.png')
 
 if __name__ == '__main__':
     example = '..\\static\\images\\logo.png'

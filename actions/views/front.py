@@ -63,6 +63,8 @@ class FrontAction(ViewsAction):
         # 文章详情信息
         elif name == 'info':
             return self.article_info()
+        elif name == 'about':
+            return self.about()
         else:
             return self.display(name)
 
@@ -161,3 +163,21 @@ class FrontAction(ViewsAction):
                      'is', article_id, e)
             log.error(traceback.format_exc())
         return self.display('front/article_info')
+
+    @counttime
+    def about(self):
+        """
+        文章详情信息
+        :return:
+        """
+        self.private_data['category_list'] = []
+        try:
+            category_list = Categories.select().where(Categories.status == 0). \
+                order_by(Categories.id.desc()).execute()
+            self.private_data['category_list'] = category_list
+            return self.display('front/about')
+        except Exception as e:
+            log.info('Failed to get article info.  Error msg '
+                     'is', e)
+            log.error(traceback.format_exc())
+        return self.display('front/about')

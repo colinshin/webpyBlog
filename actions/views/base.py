@@ -13,7 +13,7 @@ class ViewsAction(HtmlAction):
             'NAME': config.NAME,
             'create_success': False,
         }
-        print("*"*20)
+        print("*" * 20)
         print(name)
         self.tmpl_dir = config.TMPL_DIR
         self.render = web.template.render(self.tmpl_dir,
@@ -33,28 +33,45 @@ class ViewsAction(HtmlAction):
     def error(self, msg, url='/views/home', timeout=5):
         return HtmlAction.error(self, msg, url, timeout)
 
-    def get_page_str(self, url, current_page, page_size, total_count=0):
+    def get_page_str(self, url, current_page, total_page=1):
         page_string = ""
+        total_page = int(total_page)
         try:
-            total_page = total_count / page_size
-            total_page += 1 if total_count % page_size else 0
-
+            if total_page == 1:
+                return ""
             if '?' in url:
                 url = url + '&page='
             else:
                 url = url + '?page='
 
-            page_string = ''
-
-            if current_page > 1:
+            page_string = '''
+            <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+            '''
+            if current_page == 1:
                 page_string += '''
-                    <li><a href="''' + url + str(current_page - 1) + '''">←上一页</a></li>
+                <li class="page-item disabled">
+                <a class="page-link"href="#"tabindex="-1"aria-disabled="true">上一页</a>
+                </li>
                 '''
-            if total_page > current_page:
+            else:
+                page_string += '''<li class="page-item">
+                <a class="page-link" href="''' + url + str(current_page - 1) + '''">上一页</a>
+                </li>'''
+            for i in range(1, total_page + 1):
+                page_string += '''<li class="page-item">
+                <a class="page-link" href="''' + url + str(i) + '''">''' + str(i) + '''</a>
+                </li>'''
+            if total_page == current_page:
                 page_string += '''
-                    <li><a href="''' + url + str(current_page + 1) + '''">下一页→</a></li>
-               '''
+                <li class="page-item disabled">
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="#">下一页</a>
+                </li>'''
+            else:
+                page_string += '''<li class="page-item">
+                <a class="page-link" href="''' + url + str(current_page + 1) + '''">下一页</a>
+                </li>'''
         except Exception as e:
             print(e)
+            print(page_string)
         return page_string
-

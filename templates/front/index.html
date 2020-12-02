@@ -3,6 +3,7 @@ $def with (private_data)
 <html lang="en">
 <head>
     <!-- Required meta tags -->
+    <title>博客首页</title>
    $:private_data['render'].front.header(private_data)
 </head>
 <body>
@@ -71,23 +72,16 @@ $:private_data['render'].front.page_header(private_data)
                                     <li class="d-none d-sm-none d-md-none d-lg-block"><a href="#" title="作者： 惜缘"><i class="el-user"></i>惜缘</a></li>
                                     <li><a title="已有 2 个赞"><i class="el-heart"></i>2</a></li>
                                     <li><a title="已有 1次浏览"><i class="el-eye-open"></i>1</a></li>
-                                    <li class="d-none d-sm-none d-md-none d-lg-block"><a href="#" title="查看分类"><i class="el-th-list"></i>生活</a></li>
+                                    <li class="d-none d-sm-none d-md-none d-lg-block">
+                                        <a href="#" title="查看分类">
+                                            <i class="el-th-list"></i>
+                                            $:article.category.name
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             </li>
-                        <nav aria-label="Page navigation example">
-                          <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                              <a class="page-link" href="#">Next</a>
-                            </li>
-                          </ul>
-                        </nav>
+                        $:get_page_str('/', private_data['current_page'], private_data['total_page'])
                     </ul>
                 </div>
             </div>

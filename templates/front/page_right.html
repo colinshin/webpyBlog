@@ -29,17 +29,24 @@ $def with (private_data)
             </form>
             <!--</form>-->
         </div>
-        <div class="row bgc mt-4" style="display: none">
+        <div class="row bgc mt-4">
             <div class="new new-right">
                 <span><i class="el-arrow-up"></i></span>
                 <span>内容分类</span>
                 <small>Article Category</small>
             </div>
             <div class="col-md-12 ">
-                <div class="notice">
-                    <ul>
+                <div class="tab-pane" role="tabpanel"
+                     aria-labelledby="nav-profile-tab">
+                    <ul class="art-sort">
                         $for cat in private_data['category_list']:
-                            <li><a href="$make_url('/article/list', {'category_id':cat.id})">$:cat.name</a></li>
+                            <li>
+                                <span>$:loop.index</span>
+                                <a href="$make_url('/article/list', {'category_id':cat.id})">
+                                    $:cat.name
+                                    <b>(235)</b>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -89,121 +96,6 @@ $def with (private_data)
                 </div>
             </div>
         </div>
-        <div class="row bgc mt-5">
-
-            <div class="nav nav-tabs tab-atr" id="box" role="tablist">
-                <a class="nav-item  active actives" id="nav-home-tab"
-                   data-toggle="tab" href="#nav-home" role="tab"
-                   aria-controls="nav-home" aria-selected="true">文章互动</a>
-                <a class="nav-item " id="nav-profile-tab" data-toggle="tab"
-                   href="#nav-profile" role="tab" aria-controls="nav-profile"
-                   aria-selected="false">文章排行</a>
-            </div>
-
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home"
-                     role="tabpanel" aria-labelledby="nav-home-tab">
-                    <ul class="hd-ul">
-                        <li>
-                            <div class="art-hd-list-left">
-                                <a href="#">
-                                    <img src="$static_url('images/logo.png')" alt=""></a>
-                            </div>
-                            <div class="art-hd-list-right">
-                                <span><i class="el-user"></i>惜缘</span>
-                                <time>2020-3-7</time>
-                                <p>一般都是传关键字给后端，由后端来做...</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="art-hd-list-left">
-                                <a href="#"><img src="$static_url('images/logo.png')"
-                                                 alt=""></a>
-                            </div>
-                            <div class="art-hd-list-right">
-                                <span><i class="el-user"></i>惜缘</span>
-                                <time>2020-3-7</time>
-                                <p>一般都是传关键字给后端，由后端来做...</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="art-hd-list-left">
-                                <a href="#"><img src="$static_url('images/logo.png')"
-                                                 alt=""></a>
-                            </div>
-                            <div class="art-hd-list-right">
-                                <span><i class="el-user"></i>惜缘</span>
-                                <time>2020-3-7</time>
-                                <p>一般都是传关键字给后端，由后端来做...</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="art-hd-list-left">
-                                <a href="#"><img src="$static_url('images/logo.png')"
-                                                 alt=""></a>
-                            </div>
-                            <div class="art-hd-list-right">
-                                <span><i class="el-user"></i>惜缘</span>
-                                <time>2020-3-7</time>
-                                <p>一般都是传关键字给后端，由后端来做...</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="art-hd-list-left">
-                                <a href="#"><img src="$static_url('images/logo.png')"
-                                                 alt=""></a>
-                            </div>
-                            <div class="art-hd-list-right">
-                                <span><i class="el-user"></i>惜缘</span>
-                                <time>2020-3-7</time>
-                                <p>一般都是传关键字给后端，由后端来做...</p>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel"
-                     aria-labelledby="nav-profile-tab">
-                    <ul class="art-sort">
-                        <li>
-                            <span>1</span>
-                            <a href="#">thinkphp5随机抽取数据的方法
-                                <b>(235)</b>
-                            </a>
-                        </li>
-                        <li>
-                            <span>2</span>
-                            <a href="#">thinkphp5随机抽取数据的方法
-                                <b>(235)</b>
-                            </a>
-                        </li>
-                        <li>
-                            <span>3</span>
-                            <a href="#">thinkphp5随机抽取数据的方法
-                                <b>(235)</b>
-                            </a>
-                        </li>
-                        <li>
-                            <span>4</span>
-                            <a href="#">thinkphp5随机抽取数据的方法
-                                <b>(235)</b>
-                            </a>
-                        </li>
-                        <li>
-                            <span>5</span>
-                            <a href="#">thinkphp5随机抽取数据的方法
-                                <b>(235)</b>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-
-        </div>
-
-
         <div class="row bgc mt-5">
             <div class="new new-right">
                 <span><i class="el-tags"></i>标签云</span>
