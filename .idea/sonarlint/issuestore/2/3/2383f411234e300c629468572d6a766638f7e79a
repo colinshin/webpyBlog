@@ -1,6 +1,0 @@
-
-dpython:S2208"GImport only needed names or import the module and then use its members.(Ç³àÎúÿÿÿÿ
-Cpython:S1481"+Remove the unused local variable "err_msg".(õú¸
-Jpython:S2638J"&Move parameter filename to position 2.(‰Ãùâûÿÿÿÿ8œĞ—È.
-Jpython:S2638J"&Move parameter filepath to position 1.(‰Ãùâûÿÿÿÿ8œĞ—È.
-Zpython:S1120">Replace this generic exception class with a more specific one.(¨Ğ¶øÿÿÿÿ

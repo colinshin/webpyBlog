@@ -1,68 +1,0 @@
-
-Mjavascript:S1117µ"1'Palette' is already declared in the upper scope.(Ü¡t
-Pjavascript:S1117Œ"3'Extension' is already declared in the upper scope.(ì¹Éº
-˜javascript:S2681ì"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-—javascript:S2681z"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-Yjavascript:S1117/"7'PickerHandler' is already declared in the upper scope.(ñãÛ¬øÿÿÿÿ
-˜javascript:S2681î"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(ôùÓÆ
-˜javascript:S2681›0"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681ì"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681‡"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681ş"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681¤"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(ôùÓÆ
-˜javascript:S2681ü"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681ü."{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681ü"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681è"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-Xjavascript:S1117ò,"6'ColorHandler' is already declared in the upper scope.(ºêÑ›ûÿÿÿÿ
-˜javascript:S2681è"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-Ejavascript:S1940¢"(Use the opposite operator (!==) instead.(œ•ŒÙ
-Tjavascript:S1117ˆ"2'Debugger' is already declared in the upper scope.(Ú»’…şÿÿÿÿ
-˜javascript:S2681ş"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-Rjavascript:S1117•"6'PopupHandler' is already declared in the upper scope.(–ìÀm
-Gjavascript:S3796#"*Add a "return" statement to this callback.(÷Ş¦
-Vjavascript:S1481º":Remove the declaration of the unused 'realColor' variable.(ÉÇğ
-Pjavascript:S1117ß"3'HSVAColor' is already declared in the upper scope.(¸áØ
-˜javascript:S2681¢"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-Xjavascript:S1117ë""6'InputHandler' is already declared in the upper scope.(¦™èûÿÿÿÿ
-Pjavascript:S1117¿"3'ColorItem' is already declared in the upper scope.(ŞÅú
-cjavascript:S4524ã"AMove this "default" clause to the end of this "switch" statement.(İ–Ò˜ÿÿÿÿÿ
-—javascript:S2681z"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-javascript:S2681Ç"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(şñ•Üùÿÿÿÿ
-˜javascript:S2681ì"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-Rjavascript:S1117‰"5'Colorpicker' is already declared in the upper scope.(¶Ê¡Ã
-javascript:S2681Ç"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(şñ•Üùÿÿÿÿ
-Njavascript:S1117½"1'Preview' is already declared in the upper scope.(È¨—‹
-Sjavascript:S1854º"7Remove this useless assignment to variable "realColor".(ÉÇğ
-˜javascript:S2681ş"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(ôùÓÆ
-Tjavascript:S1117ú"7'SliderHandler' is already declared in the upper scope.(Ñğ
-˜javascript:S2681Ü,"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-—javascript:S2681z"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681ü."{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681ş"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-ejavascript:S3981’+"HFix this expression; length of "obj" is always greater or equal to zero.(››ş’
-˜javascript:S2681Õ""{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681‡"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681Ü,"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681è"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681í
-"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681Õ""{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681í
-"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-Jjavascript:S1940‡"(Use the opposite operator (!==) instead.(ı×öùÿÿÿÿ
-˜javascript:S2681¢"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-javascript:S2681Ç"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(şñ•Üùÿÿÿÿ
-Njavascript:S1117Q"-'key' is already declared in the upper scope.(ÇÜ¿øÿÿÿÿ
-˜javascript:S2681Ü,"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-Xjavascript:S1117£0"6'AddonHandler' is already declared in the upper scope.(ÄÂ¼Œÿÿÿÿÿ
-˜javascript:S2681›0"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681í
-"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681›0"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681‡"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681ü"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-Ojavascript:S1117"2'Swatches' is already declared in the upper scope.(ØÄ”ˆ
-˜javascript:S2681Õ""{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681¢"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾
-˜javascript:S2681ü."{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(òâ¿¾

@@ -1,48 +1,0 @@
-
-kjavascript:S1871å"NThis branch's code block is the same as the block for the branch on line 1123.(§¼Éç
-ijavascript:S2259¶2"LTypeError can be thrown as "initBodyScroll" might be null or undefined here.(ùóº¿
-Ijavascript:S2814¨"''paddingElementCSS' is already defined.(ùø¸™üÿÿÿÿ
-Njavascript:S1117§1"1'options' is already declared in the upper scope.(”§¶¿
-Tjavascript:S1117›"2'template' is already declared in the upper scope.(ÿ¼¥œıÿÿÿÿ
-Wjavascript:S1117å&"5'scrollRatio' is already declared in the upper scope.(À´Óæúÿÿÿÿ
-Ljavascript:S1854¢"/Remove this useless assignment to variable "s".(—ÊôÊ
-8javascript:S1116ˆ"Unnecessary semicolon.(ôŸìúÿÿÿÿ
-fjavascript:S1854Â"DRemove this useless assignment to variable "displayIsHiddenChanged".(ºŸÂñûÿÿÿÿ
-Wjavascript:S1117à-"5'coordinates' is already declared in the upper scope.(”ˆĞºşÿÿÿÿ
-8javascript:S1116¶0"Unnecessary semicolon.(ôŸìúÿÿÿÿ
-Qjavascript:S1117§1"4'extensions' is already declared in the upper scope.(”§¶¿
-Ujavascript:S1854İ"3Remove this useless assignment to variable "start".(‹Åã’ùÿÿÿÿ
-Ljavascript:S1854²"/Remove this useless assignment to variable "s".(—ÊôÊ
-Tjavascript:S1854ı"2Remove this useless assignment to variable "dump".(ĞúÌÜøÿÿÿÿ
-javascript:S4165­"_Review this useless assignment: "a" already holds the assigned value along all execution paths.(†Ä»Ğıÿÿÿÿ
-8javascript:S1116á"Unnecessary semicolon.(ôŸìúÿÿÿÿ
-djavascript:S1117›"B'validatedOptionsPrepared' is already declared in the upper scope.(ÿ¼¥œıÿÿÿÿ
-Ojavascript:S1117¨0"-'obj' is already declared in the upper scope.(³íòßıÿÿÿÿ
-Rjavascript:S1117ˆ"0'remove' is already declared in the upper scope.(¬šŠ“ıÿÿÿÿ
-Qjavascript:S1117"/'index' is already declared in the upper scope.(ƒğûôúÿÿÿÿ
-\javascript:S1117›":'validatedOptions' is already declared in the upper scope.(ÿ¼¥œıÿÿÿÿ
-8javascript:S1116õ"Unnecessary semicolon.(ôŸìúÿÿÿÿ
-javascript:S4165¶"_Review this useless assignment: "a" already holds the assigned value along all execution paths.(†Ä»Ğıÿÿÿÿ
-Šjavascript:S2583‰"mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed.(…¦’
-:javascript:S2814Ú"'element' is already defined.(†Çá
->javascript:S2870£)"Remove this use of "delete".(‹Èã¡ıÿÿÿÿ
-8javascript:S1116š"Unnecessary semicolon.(ôŸìúÿÿÿÿ
-bjavascript:S2589ù"@This always evaluates to truthy. Consider refactoring this code.(–ÚÄÓÿÿÿÿÿ
-Ljavascript:S1854©"/Remove this useless assignment to variable "s".(—ÊôÊ
-pjavascript:S1871¤"NThis branch's code block is the same as the block for the branch on line 3361.(Ÿ¬ÄÒüÿÿÿÿ
-Qjavascript:S1854–"/Remove this useless assignment to variable "t".(­ù°Ûúÿÿÿÿ
-bjavascript:S2137"ADo not use "undefined" to declare a parameter - use another name.(¥ˆ²ÿûÿÿÿÿ
-Tjavascript:S1854Ş"2Remove this useless assignment to variable "name".(Ÿöºòûÿÿÿÿ
-gjavascript:S3403)"JRemove this "!==" check; it will always be true. Did you mean to use "!="?(´œá‘
-˜javascript:S2681£"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(óû‰ê
-javascript:S4165¤"_Review this useless assignment: "a" already holds the assigned value along all execution paths.(†Ä»Ğıÿÿÿÿ
-_javascript:S3785"BTypeError can be thrown as this operand might have primitive type.(íİ­å
-Kjavascript:S1117³".'msie' is already declared in the upper scope.(¨ßíë
-Sjavascript:S1854¡"1Remove this useless assignment to variable "now".(ğ‰¹®üÿÿÿÿ
-ljavascript:S3686ú"JCorrect the use of this function; on line 766 it was called without "new".(äÕîöÿÿÿÿÿ
-kjavascript:S1871•3"NThis branch's code block is the same as the block for the branch on line 6547.(çÁœ¦
-Wjavascript:S1481Ş"5Remove the declaration of the unused 'name' variable.(Ÿöºòûÿÿÿÿ
-8javascript:S1116Ğ"Unnecessary semicolon.(ôŸìúÿÿÿÿ
-ijavascript:S1481Â"GRemove the declaration of the unused 'displayIsHiddenChanged' variable.(ºŸÂñûÿÿÿÿ
-˜javascript:S2681£"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(óû‰ê
-8javascript:S1116Û"Unnecessary semicolon.(ôŸìúÿÿÿÿ

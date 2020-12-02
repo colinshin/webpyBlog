@@ -1,17 +1,0 @@
-
-gjavascript:S905ß"FExpected an assignment or function call and instead saw an expression.(¨²ã…ùÿÿÿÿ
-Sjavascript:S1117L"2'Lightbox' is already declared in the upper scope.(»€ç©ýÿÿÿÿ
-ajavascript:S905"FExpected an assignment or function call and instead saw an expression.(íñš–
-vjavascript:S3973Ù"YUse curly braces or indentation to denote the code conditionally executed by this "else".(Ã¹Ò—
-Wjavascript:S1854"6Remove this useless assignment to variable "Lightbox".(”Á¼´þÿÿÿÿ
-Ljavascript:S1117"+'$' is already declared in the upper scope.(”Á¼´þÿÿÿÿ
-Zjavascript:S1481"9Remove the declaration of the unused 'Lightbox' variable.(”Á¼´þÿÿÿÿ
-—javascript:S2681"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(Ááå¦
-vjavascript:S3973É"YUse curly braces or indentation to denote the code conditionally executed by this "else".(Ã¹Ò—
-javascript:S2692Ø"bThis check ignores index 0; consider using 'includes' method to make this check safe and explicit.(Ó”ý­
-—javascript:S2681"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(Ááå¦
-Njavascript:S1117."2'Lightbox' is already declared in the upper scope.(½Þ¾Ô
-„javascript:S2692œ"bThis check ignores index 0; consider using 'includes' method to make this check safe and explicit.(¨ïŽÇùÿÿÿÿ
-Pjavascript:S1736ß".Remove this code after the "return" statement.(¨²ã…ùÿÿÿÿ
-—javascript:S2681"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(Ááå¦
-javascript:S2692Ó"bThis check ignores index 0; consider using 'includes' method to make this check safe and explicit.(Ù¦¹¡
