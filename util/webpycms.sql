@@ -177,4 +177,12 @@ CREATE TABLE `version`  (
 -- ----------------------------
 INSERT INTO `version` VALUES (1, '0.1');
 
+CREATE TABLE tags (
+id int auto_increment primary KEY,
+NAME VARCHAR ( 12 ) NOT NULL,
+createTime datetime NULL,
+updateTime datetime NULL,
+STATUS SMALLINT default 0 not NULL,
+constraint tags_name_uindex unique(name));
+
 SET FOREIGN_KEY_CHECKS = 1;

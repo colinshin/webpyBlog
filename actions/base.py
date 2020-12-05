@@ -5,6 +5,12 @@ from html import parser
 from html.parser import HTMLParser
 from urllib.parse import urlencode
 import json
+
+from tinydb import TinyDB, where
+
+from models.articles import Articles
+from models.categories import Categories
+from models.tags import Tags
 from settings import config
 
 
@@ -23,6 +29,8 @@ class BaseAction(object):
             'htmlunquote': self.htmlunquote,
             'is_login': self.is_login,
             'get_page_str': self.get_page_str,
+            'get_tags': self.get_tags,
+            'get_ca_count': self.get_ca_count,
         }
 
         self.tmpl_dir = None
@@ -123,6 +131,28 @@ class BaseAction(object):
 
     def get_page_str(self):
         return ''
+
+    def get_ca_count(self, category_id):
+        return Categories.select().join(Articles).where(Articles.category.id == int(category_id)).count()
+
+    def get_tags(self):
+        db = TinyDB('settings/db.json')
+        table = db.table('_default')
+        res = table.get(where('name') == 'tags')
+        if res:
+            data = res.get("data")
+            tags_dict_list = json.loads(data)
+        else:
+            tags_list = Tags.select().where(Tags.status == 0)
+            tags_dict_list = []
+            for tag in tags_list:
+                count = Articles.select().where(Articles.keywords.contains(str(tag.name))).count()
+                tags_dict_list.append({tag.name: count})
+            db.truncate()
+            table = db.table('_default')
+            table.insert({"name": "tags", "data": json.dumps(tags_dict_list)})
+            db.close()
+        return tags_dict_list
 
 
 class HtmlAction(BaseAction):

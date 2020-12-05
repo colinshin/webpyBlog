@@ -3,6 +3,9 @@
 from time import time
 from functools import wraps
 import web
+from tinydb import TinyDB
+
+from models.tags import Tags
 from .base import ViewsAction
 from util.pwd_util import admin_pwd_digest
 from models.articles import Articles
@@ -184,10 +187,23 @@ class AdminAction(ViewsAction):
             summary = inputs.get("summary")
             category_id = inputs.get("category_id")
             source_url = inputs.get("source_url", "")
-            keywords = inputs.get("keywords", "")
+            keywords = str(inputs.get("keywords", "")).strip()
             image = Images.get_or_none()
             category = Categories.get_or_none(Categories.id == category_id)
             try:
+                tags_list = keywords.split("，") if keywords else []
+                if tags_list:
+                    got_tags = Tags.select().where(Tags.name.in_(tags_list))
+                    tmp_list = []
+                    for tag in got_tags:
+                        tmp_list.append(tag.name)
+                    for tag_str in tags_list:
+                        if tag_str not in tmp_list:
+                            t = Tags(name=tag_str)
+                            t.save()
+                    db = TinyDB('settings/db.json')
+                    db.truncate()
+                    db.close()
                 article = Articles(name=title, content=content,
                                    summary=summary,
                                    category=category,
@@ -222,9 +238,23 @@ class AdminAction(ViewsAction):
             summary = inputs.get("summary")
             category_id = inputs.get("category_id")
             source_url = inputs.get("source_url", "")
-            keywords = inputs.get("keywords", "")
+            keywords = str(inputs.get("keywords", "")).strip()
             article = Articles.get_or_none(Articles.id == article_id)
             try:
+                tags_list = keywords.split("，") if keywords else []
+                if tags_list:
+                    got_tags = Tags.select().where(Tags.name.in_(tags_list))
+                    tmp_list = []
+                    for tag in got_tags:
+                        tmp_list.append(tag.name)
+                    for tag_str in tags_list:
+                        tag_str.strip()
+                        if tag_str not in tmp_list:
+                            t = Tags(name=tag_str)
+                            t.save()
+                    db = TinyDB('settings/db.json')
+                    db.truncate()
+                    db.close()
                 article.update(name=name, content=content, summary=summary,
                                category_id=category_id,
                                original_address=source_url,

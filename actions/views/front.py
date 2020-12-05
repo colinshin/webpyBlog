@@ -63,6 +63,8 @@ class FrontAction(ViewsAction):
         # 文章详情信息
         elif name == 'info':
             return self.article_info()
+        elif name == 'article_tag_list':
+            return self.article_tag_list()
         elif name == 'about':
             return self.about()
         else:
@@ -181,3 +183,24 @@ class FrontAction(ViewsAction):
                      'is', e)
             log.error(traceback.format_exc())
         return self.display('front/about')
+
+    @counttime
+    def article_tag_list(self):
+        """标签下文章列表:return:"""
+        inputs = self.get_input()
+        tag = inputs.get('tag', None)
+        self.private_data['category_list'] = []
+        self.private_data['tag'] = tag
+        self.private_data['article_list'] = []
+        try:
+            category_list = Categories.select().where(Categories.status == 0).\
+                order_by(Categories.id.desc())
+            if tag:
+                article_query = Articles.select().where(Articles.keywords.contains(tag))
+                self.private_data['category_list'] = category_list
+                self.private_data['article_list'] = article_query.paginate(1, 20)
+            return self.display('front/tags_list')
+        except Exception as e:
+            log.info('Failed to get search result.tag is%s.Error msg is', tag, e)
+            log.error(traceback.format_exc())
+        return self.display('front/tags_list')
