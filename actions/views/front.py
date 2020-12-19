@@ -67,6 +67,8 @@ class FrontAction(ViewsAction):
             return self.article_tag_list()
         elif name == 'about':
             return self.about()
+        elif name == 'resume':
+            return self.resume()
         else:
             return self.display(name)
 
@@ -203,4 +205,19 @@ class FrontAction(ViewsAction):
         except Exception as e:
             log.info('Failed to get search result.tag is%s.Error msg is', tag, e)
             log.error(traceback.format_exc())
-        return self.display('front/tags_list')
+        return self.display('front/tags_list')    \
+
+
+    @counttime
+    def resume(self):
+        """标签下文章列表:return:"""
+        self.private_data['category_list'] = []
+        try:
+            category_list = Categories.select().where(Categories.status == 0).\
+                order_by(Categories.id.desc())
+            self.private_data['category_list'] = category_list
+            return self.display('front/resume')
+        except Exception as e:
+            log.info('Failed to get search result.tag is%s.Error msg is', e)
+            log.error(traceback.format_exc())
+        return self.display('front/resume')

@@ -1,0 +1,127 @@
+$def with(private_data)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>个人简历</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet"
+          href="$static_url('lib/bootstrap/css/bootstrap.css')">
+    <link rel="stylesheet" href="$static_url('css/animate.css')">
+    <link rel="stylesheet" href="$static_url('css/font-icon.css')">
+    <link href="$static_url('/images/favicon.ico')" rel="shortcut icon"
+          type="text/css"/>
+    <link rel="stylesheet" href="$static_url('css/main.css')">
+    <link href="$static_url('css/blog.css')" rel="stylesheet">
+</head>
+<body>
+<!--导航-->
+$:private_data['render'].front.page_header(private_data)
+<div class="divContent container">
+    <div class="page-header">
+        <h1 style="text-align:center">个人简历</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover table-condensed">
+                    <tr>
+                        <td>姓名</td>
+                        <td>YYY</td>
+                        <td>学校</td>
+                        <td>XX大学</td>
+                        <td>学历</td>
+                        <td>本科</td>
+                    </tr>
+                    <tr>
+                        <td>专业</td>
+                        <td>软件工程</td>
+                        <td>求职岗位</td>
+                        <td>python软件工程</td>
+                        <td>期望薪资</td>
+                        <td>21k</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="text-wrap">
+                滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答滴滴答答
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <!--大屏幕-->
+            <div class="jumbotron">
+                <h2>个人荣誉</h2>
+                <hr>
+                <p2>获得******************************************</p2>
+                <h2>我的空间</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <a href="">
+                            <button class="btn-primary">个人博客</button>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="">
+                            <button class="btn-primary">个人博客园</button>
+                        </a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="">
+                            <button class="btn-primary">我的github</button>
+                        </a>
+                    </div>
+                </div>
+                <h2>个人技能</h2>
+                <hr>
+                <p>1.***************</p>
+                <p>2.***************</p>
+                <p>3.***************</p>
+                <p>4.***************</p>
+                <p>5.***************</p>
+            </div>
+        </div>
+    </div>
+    <h2 id="skill" class="lead">职业技能</h2>
+    <div class="row user-skill">
+        <div class="col align-self-start">
+            <div>
+                <span class="badge-pill badge-success">JavaScript</span>
+                <span class="badge-pill badge-success">Vue.js</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                     style="width:80%;">
+                    <span>熟悉</span>
+                </div>
+            </div>
+            <p>
+                <span class="badge-pill badge-success">Node.js</span>
+                <span class="badge-pill badge-success">PHP</span>
+            </p>
+            <div class="progress">
+                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+                     style="width:75%;">
+                    <span>熟悉</span></div>
+            </div>
+            <p><span class="badge-pill badge-info">html/css</span>
+            </p>
+            <div class="progress">
+                <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+                     style="width:70%;"><span>熟悉</span></div>
+            </div>
+            <p><span class="badge-pill badge-warning">数据结构/算法</span></p>
+            <div class="progress">
+                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+                     style="width:79%;"><span>熟悉</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+$:private_data['render'].front.footer(private_data)
+<script src="$static_url('lib/jquery/jquery.js')"></script>
+<script src="$static_url('lib/bootstrap/js/bootstrap.js')"></script>
+</body>
+</html>
