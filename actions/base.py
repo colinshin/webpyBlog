@@ -10,6 +10,7 @@ from tinydb import TinyDB, where
 
 from models.articles import Articles
 from models.categories import Categories
+from models.site import Site
 from models.tags import Tags
 from settings import config
 
@@ -31,6 +32,7 @@ class BaseAction(object):
             'get_page_str': self.get_page_str,
             'get_tags': self.get_tags,
             'get_ca_count': self.get_ca_count,
+            'get_site_info': self.get_site_info,
         }
 
         self.tmpl_dir = None
@@ -131,6 +133,9 @@ class BaseAction(object):
 
     def get_page_str(self):
         return ''
+
+    def get_site_info(self):
+        return Site.get_or_none(Site.id == 1)
 
     def get_ca_count(self, category_id):
         return Categories.select().join(Articles).where(Articles.category.id == int(category_id)).count()

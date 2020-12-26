@@ -1,7 +1,7 @@
 $def with (private_data)
 <!--底部-->
 <footer id="footer">
-    <div class="container">
+    <div class="container" style="display: none">
         <div class="row footer-row">
             <div class="col-md-6">
                 <div class="fooder-title">
@@ -51,9 +51,9 @@ $def with (private_data)
         </div>
     </div>
     <div class="foot-nav text-center">
-        <div class="copy-right"><span>Copyright © xxxxxxxx 2018 </span></div>
+        <div class="copy-right"><span>Copyright © $get_site_info().copyright </span></div>
         <div class="bottom-nav">
-            <span>ICP备xxxx号 </span>
+            <span>$get_site_info().case_number </span>
         </div>
     </div>
 </footer>

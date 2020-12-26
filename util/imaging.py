@@ -101,7 +101,8 @@ class GenImage(object):
         m.update(char.encode("utf-8"))
         m.hexdigest()
         file_name = m.hexdigest() + ".jpg"
-        file_path = os.path.realpath(os.path.join(config.STATIC_DIR, "images", file_name))
+        file_path = os.path.realpath(
+            os.path.join(config.STATIC_DIR, "images", file_name))
         try:
             self.ins.save(file_path)
             return True, file_name
@@ -136,3 +137,4 @@ class GenImage(object):
 #     im = Imaging(StringIO(buf))
 #     print(im.size())
 #     open('/tmp/out.jpeg', 'w').write(im.resize(80, 60))
+

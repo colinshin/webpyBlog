@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from peewee import CharField, TextField, DateTimeField
+from peewee import CharField, TextField, DateTimeField, SmallIntegerField
 from models.base import BaseModel
 from datetime import datetime
 
@@ -8,4 +8,7 @@ from datetime import datetime
 class Notes(BaseModel):
     name = CharField()
     content = TextField()
-    created_time = DateTimeField(default=datetime.now)
+    status = SmallIntegerField(default=0)
+    createTime = DateTimeField(default=datetime.now)
+    updateTime = DateTimeField(default=datetime.now)
+

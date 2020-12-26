@@ -5,6 +5,8 @@ from functools import wraps
 import web
 from tinydb import TinyDB
 
+from models.albums import Albums
+from models.site import Site
 from models.tags import Tags
 from .base import ViewsAction
 from util.pwd_util import admin_pwd_digest
@@ -68,6 +70,14 @@ class AdminAction(ViewsAction):
         #   用户信息
         elif name == 'update_category':
             return self.update_category()
+        elif name == 'albums_list':
+            return self.albums_list()
+        elif name == 'create_album':
+            return self.create_album()
+        elif name == 'update_album':
+            return self.update_album()
+        elif name == 'save_site_info':
+            return self.save_site_info()
         else:
             return self.display(name)
 
@@ -90,6 +100,12 @@ class AdminAction(ViewsAction):
         #   用户信息
         elif name == 'update_category':
             return self.update_category()
+        elif name == 'create_album':
+            return self.create_album()
+        elif name == 'update_album':
+            return self.update_album()
+        elif name == 'save_site_info':
+            return self.save_site_info()
         else:
             return self.display(name)
 
@@ -350,6 +366,87 @@ class AdminAction(ViewsAction):
                 self.private_data["update_success"] = False
                 return self.display("admin/update_category")
 
+    @login_required
+    @counttime
+    def albums_list(self):
+        inputs = self.get_input()
+        if web.ctx.method == "GET":
+            page = int(inputs.get('page', 1))
+            page_size = int(inputs.get('page_size', 20))
+            self.private_data['current_page'] = page
+            self.private_data['total_page'] = 0
+            albums_query = Albums.select().where(Albums.status == 0).\
+                order_by(Albums.id.asc())
+            total_count = albums_query.count()
+            total_page = (total_count + page_size - 1) / page_size
+            self.private_data['total_page'] = total_page
+            self.private_data['albums_list'] =\
+                albums_query.paginate(page, page_size).execute()
+            return self.display("admin/albums_list")
+
+    @login_required
+    @counttime
+    def create_album(self):
+        inputs = self.get_input()
+        if web.ctx.method == "POST":
+            name = inputs.get('name', '').strip()
+            album = Albums.get_or_none(Albums.name == name)
+            if album:
+                self.private_data["create_success"] = False
+                self.private_data["create_message"] = u"相册已存在"
+                return self.display("admin/create_album")
+            try:
+                album = Albums(name=name)
+                album.save()
+                self.private_data["create_success"] = True
+                self.private_data["create_message"] = u"相册创建成功"
+                return web.seeother(self.make_url('albums_list'))
+            except Exception as e:
+                log.error('create album failed%s' % traceback.format_exc())
+                self.private_data["create_success"] = False
+                self.private_data["create_message"] = u"创建相册失败"
+                return self.display("admin/create_album")
+        if web.ctx.method == "GET":
+            return self.display("admin/create_album")
+
+    @login_required
+    @counttime
+    def update_album(self):
+        inputs = self.get_input()
+        if web.ctx.method == "POST":
+            name = inputs.get('name', '').strip()
+            album_id = inputs.get("album_id", None)
+            exist_album = Albums.get_or_none(Albums.name == name)
+            if exist_album and exist_album.id != album_id:
+                self.private_data["update_success"] = False
+                self.private_data["update_message"] = u"同名相册已存在"
+                return web.seeother(self.make_url('update_album',
+                                                  {'album_id': album_id}))
+            try:
+                album = Albums.get_or_none(Albums.id == int(album_id))
+                if album:
+                    Albums.update(name=name, updateTime=time()).\
+                    where(Albums.id == int(album_id)).execute()
+                    self.private_data["update_success"] = True
+                    return web.seeother(self.make_url('albums_list'))
+            except Exception as e:
+                log.error('create album failed%s' % traceback.format_exc())
+                self.private_data["update_success"] = False
+                self.private_data["update_message"] = u"更新相册失败"
+                return web.seeother(self.make_url('update_album',
+                                                  {'album_id': album_id}))
+        if web.ctx.method == "GET":
+            album_id = inputs.get("album_id",None)
+            if not album_id or not album_id.isdigit():
+                self.private_data["update_success"] =False
+                self.private_data["update_message"] = u"参数有误"
+                return web.seeother(self.make_url('albums_list'))
+            album = Albums.get_or_none(Albums.id == int(album_id))
+            if not album:
+                return web.seeother(self.make_url('albums_list'))
+            self.private_data["album"] = album
+            return self.display("admin/update_album")
+
     # #   编辑用户
     # @counttime
     # def edit_user_info(self):
@@ -359,4 +456,31 @@ class AdminAction(ViewsAction):
     #         return self.display('edit_personal_data')
     #     except Exception as e:
     #         log.error('edit_user_info %s' % traceback.format_exc())
-    #         return self.error(msg='编辑用户信息失败', url=self.make_url('/views/home'))
+    #         return self.error(msg='编辑用户信息失败', url=self.make_url('/views/home'))    # #   编辑用户
+
+
+    @counttime
+    def save_site_info(self):
+        inputs = self.get_input()
+        if web.ctx.method == "POST":
+            username = inputs.get('username', '').strip()
+            position = inputs.get('position', '').strip()
+            case_number = inputs.get('case_number', '').strip()
+            copy_right = inputs.get("copyright", '').strip()
+            try:
+                Site.update(username = username,
+                                      position=position,
+                                      case_number=case_number,
+                                      copyright=copy_right).\
+                    where(Site.id == 1).execute()
+                self.private_data["update_success"] = True
+                return web.seeother(self.make_url('home'))
+            except Exception as e:
+                log.error('create album failed%s' % traceback.format_exc())
+                self.private_data["update_success"] = False
+                self.private_data["update_message"] = u"更新失败"
+                return web.seeother(self.make_url('save_site_info'))
+        if web.ctx.method == "GET":
+            site = Site.get_or_none(Site.id == 1)
+            self.private_data["site"] = site
+            return self.display("admin/site_info")

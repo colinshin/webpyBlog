@@ -1,156 +1,119 @@
-$def with (privData)
+$def with (private_data)
 <!DOCTYPE html>
 <html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->  <!--<![endif]-->
 <head>
-$:privData['render'].header(privData)
-<script src="$staticUrl('common/lychee-upload/edite_upload.js')" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="$staticUrl('common/lychee-upload/upload.css')">
-<link href="$staticUrl('common/lychee-upload/iconfont/iconfont.css')" media="all" rel="stylesheet" type="text/css" />
-<link  href="$staticUrl('common/cropperjs/dist/cropper.css')" rel="stylesheet">
-<style>
-#tag2box.mytags{padding:5px 15px;}
-#tag2box .inner-box{border:1px solid #ccc;min-height:50px;padding:7px;}
-#tag2box .inner-box a{border:1px solid #ccc;height:25px;padding:2px 7px;border-radius:7px;margin:7px 9px;background-color:#ffffcc;display:inline-block;}
-#tag2box .inner-box a:hover{cursor:pointer;}
-.file-footer-caption{height:20px;}
-.color-block{width:30px;height:25px;display:inline-block;margin-right:10px;box-shadow:5px 2px 6px #000;}
-.bk-one{background-color:#FF6666;}
-.bk-two{background-color:#00CC33;}
-.bk-three{background-color:#6699FF;}
-.theme-color{width:30px;height:32px;display:block;margin-right:10px;box-shadow:5px 2px 6px #000;float:left;}
-.select-theme{height: 32px;    float: left;    margin-right: 20px;    width: 80px;}
-.file-input.file-input-new{}
-.lychee-file{display:none!important;}
-.lycropper-file,.lycropper-preview,.lycropper-hidden{display:none!important;}
-.img-container{height:250px;}
-</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>创建文章</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="$static_url('lib/AdminLTE/plugins/fontawesome-free/css/all.min.css')">
+    <!-- Ionicons -->
+    <link rel="stylesheet"
+          href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')">
+    <!-- Theme style -->
+    <link rel="stylesheet"
+          href="$static_url('lib/AdminLTE/dist/css/adminlte.min.css')">
+    <!-- summernote -->
+    <link rel="stylesheet"
+          href="$static_url('lib/AdminLTE/plugins/summernote/summernote-bs4.css')">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+          rel="stylesheet">
+    $:private_data['render'].admin.header(private_data)
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
-$:privData['render'].pageheader(privData)
-<div class="col-md-12 p5-nav-bar">
-    <div class="col-sm-12">
-        <a href="$makeUrl('/index')">
-            <span class="glyphicon glyphicon-home"></span>
-            <span>首页</span>
-        </a>&gt;&gt;
-        <span>主题编辑</span>
+<body class="hold-transition sidebar-mini layout-fixed">
+$:private_data['render'].admin.aside(private_data)
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-outline card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    编辑站点信息
+                                </h3>
+                            </div>
+                            <div class="card-body pad">
+                                <form id="formvalidate"
+                                      encType="multipart/form-data"
+                                      action="$make_url('/admin/save_site_info')"
+                                      method="post" class="form-horizontal">
+                                    <div class="nav-tabs-custom"
+                                         style="padding-top:20px;">
+                                        <div class="form-group">
+                                            <label for="username"
+                                                   class="col-md-offset-1 col-md-2 control-label col-lg-1">*
+                                                作者名:</label>
+                                            <div class="col-md-7 col-lg-8">
+                                                <input name="username"
+                                                       id="username" type="text"
+                                                       class="form-control"
+                                                       value="$:private_data['site'].username"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="position"
+                                                   class="col-md-offset-1 col-md-2 control-label col-lg-1">*职责:</label>
+                                            <div class="col-md-7 col-lg-8">
+                                                <input name="position"
+                                                          id="position"
+                                                          class="form-control" value="$:private_data['site'].position"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="case_number"
+                                                   class="col-md-offset-1 col-md-2 control-label col-lg-1">*备案号:</label>
+                                            <div class="col-md-7 col-lg-8">
+                                                <input name="case_number"
+                                                       id="case_number"
+                                                       type="text"
+                                                       class="form-control"
+                                                       value="$:private_data['site'].case_number"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="copyright"
+                                                   class="col-md-offset-1 col-md-2 control-label col-lg-1">*
+                                                版权:</label>
+                                            <div class="col-md-7 col-lg-8">
+                                                <input type="text"
+                                                       class="form-control"
+                                                       id="copyright"
+                                                       name="copyright"
+                                                       value="$:private_data['site'].copyright"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10 col-lg-10">
+                                                <button type="submit"
+                                                        class="btn btn-info pull-right"
+                                                        id="submits"
+                                                        style="width:130px!important;color:#fff;">
+                                                    保存
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 </div>
-<section class="content">
-    <div class="row">
-      <div class="has-max">
-        <div class="col-md-12 col-lg-12">
-            <form id="formvalidate" encType="multipart/form-data" action="$makeUrl('/templates/save_site_info')" method="post" class="form-horizontal">
-                <div class="nav-tabs-custom" style="padding-top:20px;">
-                     <div class="form-group">
-                         <label for="name" class="col-md-offset-1 col-md-2 control-label col-lg-1">* 名称:</label>
-                         <div class="col-md-7 col-lg-8">
-                             <input name="title" id="title" type="text" class="form-control" value="$privData['TITLE']"/>
-                         </div>
-                     </div>
-                     <div class="form-group">
-                         <label for="name" class="col-md-offset-1 col-md-2 control-label col-lg-1">*介绍:</label>
-                         <div class="col-md-7 col-lg-8">
-                             <textarea name="introduce" id="introduce" class="form-control">$privData['INTRODUCE']"</textarea>
-                         </div>
-                     </div>
-                     <div class="form-group">
-                         <label for="name" class="col-md-offset-1 col-md-2 control-label col-lg-1">*版权:</label>
-                         <div class="col-md-7 col-lg-8">
-                             <input name="webinfo" id="webinfo" type="text" class="form-control" value="$privData['WEBINFO']"/>
-                         </div>
-                     </div>
-                     <div class="form-group">
-                         <label for="name" class="col-md-offset-1 col-md-2 control-label col-lg-1">* 主题:</label>
-                         <div class="col-md-7 col-lg-8">
-                             <select class="select-theme" onchange="setValue(this.value);" name="theme"id="theme" value="$privData['THEME']">
-                             $if int(privData['THEME']) ==1:
-                                 <option value="1" selected>&nbsp;枫叶红</option>
-                             $else:
-                                 <option value="1" >&nbsp;枫叶红</option>
-                             $if int(privData['THEME']) ==2:
-                                 <option value="2" selected>&nbsp;松柏绿</option>
-                             $else:
-                                 <option value="2">&nbsp;松柏绿</option>
-                             $if int(privData['THEME']) ==3:
-                                 <option value="3" selected>&nbsp;皇家蓝</option>
-                             $else:
-                                 <option value="3">&nbsp;皇家蓝</option>
-                             </select>
-                             <div class="theme-color" id="theme-color" ></div>
-                         </div>
-                     </div>
-                     <div class="form-group">
-                         <label for="ico" class="col-md-offset-1 col-md-2 control-label col-lg-1">*图标:</label>
-                         <div class="col-md-7 col-lg-8 iuploadimg" style="padding-top:10px;" id="swip-imgs">
-                            <div class="img-container">
-                              <img src="$:privData['ICON']" class="lycropper-img" id="icoimage">
-                            </div>
-                            <div class="lycropper-input">
-                                 <input type="text" name="icobox"  class="lycropper-hidden"/>
-                            </div>
-                         </div> 
-                    </div>
-                    <div class="form-group">
-                        <label for="logo" class="col-md-offset-1 col-md-2 control-label col-lg-1">* logo:</label>
-                        <div class="col-md-7 col-lg-8" style="padding-top:10px;" id="logo">
-                           <div class="img-container">
-                              <img src="$:privData['LOGO']" class="lycropper-img" id="logoimage">
-                            </div>
-                            <div class="lycropper-input">
-                                 <input type="text" name="logobox"  class="lycropper-hidden"/>
-                            </div>
-                        </div> 
-                    </div>
-                   <div class="form-group">
-                       <div class="col-md-10 col-lg-10">
-                           <button type="button" class="btn btn-info pull-right" id="submits" style="width:130px!important;color:#fff;">保存</button>
-                       </div>
-                   </div>
-               </div>
-               </div>
-            </form>
-        </div>
-      </div>
-    </div>
-</section>
-$:privData['render'].foot(privData)
-<script src="$staticUrl('common/cropperjs/dist/cropper.js')"></script>
-<script src="$staticUrl('common/cropperjs/lecropper-1.1.js')"></script>
-<script>
-var one = '#c00d11';
-var two = '#3d9650';
-var three = '#1896ff';
-var show = document.getElementById('theme-color');
-$if privData['THEME'] =="1":
-    show.style.backgroundColor = '#c00d11';
-$elif privData['THEME'] =="2":
-    show.style.backgroundColor = '#3d9650';
-$elif privData['THEME'] =="3":
-    show.style.backgroundColor = '#1896ff';
-$else:
-    show.style.backgroundColor = '#c00d11';
-function setValue(name){
-     console.log('u select me');
-     console.log('>>>>>>> '+name +' 2222');
-     if(name==1){
-          show.style.backgroundColor = '#c00d11';
-     }
-     if(name == 2){
-         show.style.backgroundColor = '#3d9650';
-     }
-     if(name == 3){
-         show.style.backgroundColor = '#1896ff';
-     }
-}
-jQuery("#select-theme").change(function(){
-   console.log('u select me');
-});
-    function selectImage(name){
-        var fi = name.lastElementChild.firstElementChild.lastElementChild;
-        console.dir(name);
-        fi.click();
-    }
-</script>
-<body>
+$:private_data['render'].admin.foot(private_data)
+</body>
 </html>

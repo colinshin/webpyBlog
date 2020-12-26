@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-#!/usr/bin/env python
 
-from peewee import *
+from peewee import CharField, TextField, IntegerField, SmallIntegerField, \
+    DateTimeField
+
 from models.base import BaseModel
 from datetime import datetime
 
@@ -11,7 +12,6 @@ class Users(BaseModel):
     name = CharField()
     nickname = CharField(null=True)
     password = CharField()
-    created_time = DateTimeField(default=datetime.now)
     email = TextField(null=True)
     description = TextField()
     address = TextField()
@@ -19,4 +19,7 @@ class Users(BaseModel):
     avatar = TextField()
     gender = IntegerField()
     status = SmallIntegerField(default=0)
+    createTime = DateTimeField(default=datetime.now)
+    updateTime = DateTimeField(default=datetime.now)
+
 

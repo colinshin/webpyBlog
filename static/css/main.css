@@ -72,6 +72,9 @@ a{
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
+a.article-each h5.mt-0.mb-1{
+    color: #0F1313;
+}
 .art-list>li p{
     font-size: 13px;
     overflow: hidden;
@@ -80,7 +83,7 @@ a{
     color: #515151;
 }
 .art-list>li:hover{
-    border: 1px solid #ff6700;
+    border: 1px solid #524841;
 }
 .art-img{
     width: 25%;
