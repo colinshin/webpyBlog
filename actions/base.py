@@ -10,6 +10,7 @@ from tinydb import TinyDB, where
 
 from models.articles import Articles
 from models.categories import Categories
+from models.friend_link import FriendLink
 from models.site import Site
 from models.tags import Tags
 from settings import config
@@ -33,6 +34,7 @@ class BaseAction(object):
             'get_tags': self.get_tags,
             'get_ca_count': self.get_ca_count,
             'get_site_info': self.get_site_info,
+            'get_links': self.get_links,
         }
 
         self.tmpl_dir = None
@@ -137,8 +139,13 @@ class BaseAction(object):
     def get_site_info(self):
         return Site.get_or_none(Site.id == 1)
 
+    def get_links(self):
+        return FriendLink.select().where(FriendLink.status == 0). \
+                order_by(FriendLink.id.asc()).execute()
+
     def get_ca_count(self, category_id):
-        return Categories.select().join(Articles).where(Articles.category.id == int(category_id)).count()
+        return Categories.select().join(Articles).\
+            where(Articles.category.id == int(category_id)).count()
 
     def get_tags(self):
         db = TinyDB('settings/db.json')

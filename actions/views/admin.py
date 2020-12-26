@@ -6,6 +6,7 @@ import web
 from tinydb import TinyDB
 
 from models.albums import Albums
+from models.friend_link import FriendLink
 from models.site import Site
 from models.tags import Tags
 from .base import ViewsAction
@@ -78,6 +79,12 @@ class AdminAction(ViewsAction):
             return self.update_album()
         elif name == 'save_site_info':
             return self.save_site_info()
+        elif name == 'friend_links':
+            return self.friend_links()
+        elif name == 'create_link':
+            return self.create_link()
+        elif name == 'update_link':
+            return self.update_link()
         else:
             return self.display(name)
 
@@ -106,6 +113,10 @@ class AdminAction(ViewsAction):
             return self.update_album()
         elif name == 'save_site_info':
             return self.save_site_info()
+        elif name == 'create_link':
+            return self.create_link()
+        elif name == 'update_link':
+            return self.update_link()
         else:
             return self.display(name)
 
@@ -458,7 +469,7 @@ class AdminAction(ViewsAction):
     #         log.error('edit_user_info %s' % traceback.format_exc())
     #         return self.error(msg='编辑用户信息失败', url=self.make_url('/views/home'))    # #   编辑用户
 
-
+    @login_required
     @counttime
     def save_site_info(self):
         inputs = self.get_input()
@@ -484,3 +495,87 @@ class AdminAction(ViewsAction):
             site = Site.get_or_none(Site.id == 1)
             self.private_data["site"] = site
             return self.display("admin/site_info")
+
+    @login_required
+    @counttime
+    def friend_links(self):
+        inputs = self.get_input()
+        if web.ctx.method == "GET":
+            page = int(inputs.get('page', 1))
+            page_size = int(inputs.get('page_size', 20))
+            self.private_data['current_page'] = page
+            self.private_data['total_page'] = 0
+            link_query = FriendLink.select().where(FriendLink.status == 0). \
+                order_by(FriendLink.id.asc())
+            total_count = link_query.count()
+            total_page = (total_count + page_size - 1) / page_size
+            self.private_data['total_page'] = total_page
+            self.private_data['links_list'] = \
+                link_query.paginate(page, page_size).execute()
+            return self.display("admin/links_list")
+
+    @login_required
+    @counttime
+    def create_link(self):
+        inputs = self.get_input()
+        if web.ctx.method == "POST":
+            name = inputs.get('name', '').strip()
+            link_url = inputs.get('link', '').strip()
+            flink = FriendLink.get_or_none(FriendLink.name == name)
+            if flink:
+                self.private_data["create_success"] = False
+                self.private_data["create_message"] = u"链接已存在"
+                return self.display("admin/create_link")
+            try:
+                nlink = FriendLink(name=name, link=link_url)
+                nlink.save()
+                self.private_data["create_success"] = True
+                self.private_data["create_message"] = u"链接创建成功"
+                return web.seeother(self.make_url('friend_links'))
+            except Exception as e:
+                log.error('create album failed%s' % traceback.format_exc())
+                self.private_data["create_success"] = False
+                self.private_data["create_message"] = u"创建失败"
+                return self.display("admin/create_album")
+        if web.ctx.method == "GET":
+            return self.display("admin/create_link")
+
+    @login_required
+    @counttime
+    def update_link(self):
+        inputs = self.get_input()
+        if web.ctx.method == "POST":
+            name = inputs.get('name', '').strip()
+            link_url = inputs.get("link", None)
+            link_id = inputs.get("link_id", None)
+            exist_link = FriendLink.get_or_none(FriendLink.name == name)
+            if exist_link and exist_link.id != link_id:
+                self.private_data["update_success"] = False
+                self.private_data["update_message"] = u"同名已存在"
+                return web.seeother(self.make_url('update_album',
+                                                  {'album_id': link_id}))
+            try:
+                flink = FriendLink.get_or_none(FriendLink.id == int(link_id))
+                if flink:
+                    FriendLink.update(name=name, link=link_url,
+                                      updateTime=time()).\
+                    where(Albums.id == int(link_id)).execute()
+                    self.private_data["update_success"] = True
+                    return web.seeother(self.make_url('albums_list'))
+            except Exception as e:
+                log.error('create album failed%s' % traceback.format_exc())
+                self.private_data["update_success"] = False
+                self.private_data["update_message"] = u"更新相册失败"
+                return web.seeother(self.make_url('update_link',
+                                                  {'link_id': link_id}))
+        if web.ctx.method == "GET":
+            link_id = inputs.get("link_id", None)
+            if not link_id or not link_id.isdigit():
+                self.private_data["update_success"] = False
+                self.private_data["update_message"] = u"参数有误"
+                return web.seeother(self.make_url('friend_links'))
+            flink = FriendLink.get_or_none(FriendLink.id == int(link_id))
+            if not flink:
+                return web.seeother(self.make_url('friend_links'))
+            self.private_data["flink"] = flink
+            return self.display("admin/update_link")

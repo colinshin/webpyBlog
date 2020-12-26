@@ -1,0 +1,64 @@
+$def with (private_data)
+<!DOCTYPE html>
+<html>
+<head>
+$:private_data['render'].admin.header(private_data)
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+$:private_data['render'].admin.aside(private_data)
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">链接管理</h3>
+                <div class="card-tools">
+                    <a href="$make_url('/admin/create_link')" class="btn btn-success btn-sm floatRight add-and-delete">新增</a>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>标题</th>
+                        <th>链接</th>
+                        <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  $for i in private_data['links_list']:
+                    <tr>
+                        <td class="mailbox-name">$i.id</td>
+                        <td class="mailbox-name">$i.name</td>
+                        <td class="mailbox-name" style="text-align:left;">$i.link[:60]</td>
+                        <td class="mailbox-name">
+                            <a  onclick="deleteConfirm(name,$i.id)" title="详情">
+                                <img src="/static/lib/bootstrap-icons-1.0.0/trash-fill.svg" alt="" width="20" height="20" title="删除">
+                            </a>&nbsp;
+                            <a href="$make_url('update_link',{'link_id':i.id})"  title="编辑">
+                                <img src="/static/lib/bootstrap-icons-1.0.0/pencil-square.svg" alt="" width="20" height="20" title="编辑">
+                            </a>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+                <div class="card-footer">
+                    <div class="card-tools">
+                      $:get_page_str('/', private_data['current_page'], private_data['total_page'])
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+$:private_data['render'].admin.foot(private_data)
+</body>

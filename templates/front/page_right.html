@@ -124,10 +124,8 @@ $def with (private_data)
             </div>
             <div class="col-md-12 ">
                 <ul class="links">
-                    <li><a href="">百度一下</a></li>
-                    <li><a href="">惜缘个人博客</a></li>
-                    <li><a href="">百度一下</a></li>
-                    <li><a href="">百度一下</a></li>
+                    $for k in get_links():
+                        <li><a href="$k.link">$k.name</a></li>
                 </ul>
 
             </div>
