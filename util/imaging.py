@@ -2,17 +2,18 @@
 # coding=utf-8
 import base64
 import hashlib
+import io
 import os
 from io import BytesIO
-from settings import config
 from PIL import Image, ImageDraw, ImageFont
+from settings import config
 
 
 class Imaging(object):
     def __init__(self, file_obj):
         self.file_obj = file_obj
-        file_obj.seek(0)
-        self.im = Image.open(self.file_obj)
+        byte_stream = io.BytesIO(self.file_obj)  # 把请求到的数据转换为Bytes字节流
+        self.im = Image.open(byte_stream)
 
     def format(self):
         return self.im.format.lower()
@@ -36,16 +37,19 @@ class Imaging(object):
                   xres=config.THUMBNAIL_XRES,
                   yres=config.THUMBNAIL_YRES,
                   quality=config.IMAGE_QUALITY,
-                  dpi=config.IMAGE_DPI, format='JPEG'):
+                  dpi=config.IMAGE_DPI, format='PNG'):
         img = self.im
         # To workaround issue against cannot write mode P as JPEG      
         if img.mode != 'RGB':
             img = img.convert('RGB')
 
-        img.thumbnail((xres, yres), Image.ANTIALIAS)
+        img.thumbnail((115, 101), Image.ANTIALIAS)
         output = BytesIO()
         img.save(output, format, dpi=dpi, quality=quality)
-        return output.getvalue()
+        byte_data = output.getvalue()
+        base64_str = base64.b64encode(byte_data)
+        return b'data:image/png;base64,' + base64_str
+        # return output.getvalue()
 
     @staticmethod
     def default_thumbnail():

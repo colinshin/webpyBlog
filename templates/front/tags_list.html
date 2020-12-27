@@ -33,18 +33,20 @@ $:private_data['render'].front.page_header(private_data)
                                 <li class="media wow bounceInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                             $if loop.even:
                                 <li class="media wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
+                            <a class="article-each" href="$make_url('/article/info',{'article_id':article.id})" target="_blank">
                             <div class="art-img">
                                 <img class="mr-3" src="$static_url('/images/8.jpg')"  alt="Generic placeholder image">
                             </div>
                             <div class="media-body art-content">
-                                <h5 class="mt-0 mb-1"><a href="$make_url('/article/info',{'article_id':article.id})">$:article.name</a></h5>
+                                <h5 class="mt-0 mb-1">$:article.name</h5>
                                 <p>$:article.summary...</p>
                                 <ul>
-                                    <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>$:article.createTime</a></li>
-                                    <li class="d-none d-sm-none d-md-none d-lg-block"><a href="#" title="作者： 惜缘"><i class="el-user"></i>惜缘</a></li>
-                                    <li class="d-none d-sm-none d-md-none d-lg-block"><a href="#" title="查看分类"><i class="el-th-list"></i>$:article.category.name</a></li>
+                                    <li><span title="惜缘2019-04-03发表"><i class="el-time"></i>$:article.createTime</span></li>
+                                    <li class="d-none d-sm-none d-md-none d-lg-block"><span title="作者： 惜缘"><i class="el-user"></i>惜缘</span></li>
+                                    <li class="d-none d-sm-none d-md-none d-lg-block"><span title="查看分类"><i class="el-th-list"></i>$:article.category.name</span></li>
                                 </ul>
                             </div>
+                                </a>
                             </li>
                     </ul>
                 </div>
@@ -55,22 +57,5 @@ $:private_data['render'].front.page_header(private_data)
     </div>
 </div>
 $:private_data['render'].front.footer(private_data)
-<script>
-    window.onload=function () {
-        var art_list=document.getElementById('box');
-        var art_list_a=art_list.getElementsByTagName('a');
-        for (var i=0;i<art_list_a.length;i++){
-            var aclick = art_list_a[i];
-            aclick.onclick=function(){
-                for (var j=0;j<art_list_a.length;j++){
-                    art_list_a[j].className='';
-                    art_list_a[j].style.color='#000000';
-                }
-                this.className='actives';
-                this.style.color='#ffffff';
-            };
-        }
-    }
-</script>
 </body>
 </html>

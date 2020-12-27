@@ -37,7 +37,7 @@ class DevelopConfig(object):
     UPLOAD_DIR = os.path.join(STATIC_DIR, 'uploads')
 
     # URLs
-    WEB_URL = 'http://www.webpycms.com'
+    WEB_URL = 'http://127.0.0.1:8080/'
     ADMIN_URL = 'http://admin.webpycms.com'
     API_URL = 'http://api.webpycms.com'
     ALI_CDNIMAGES_URL = 'http://images.webpycms.com' if not os.getenv(

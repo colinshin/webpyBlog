@@ -125,10 +125,11 @@ a.article-each h5.mt-0.mb-1{
     color: #212529;
 }
 .art-content a:hover{
-    color: #ff6700;
+    color: #4B4643;
+    cursor: pointer;
 }
 .art-content h5:hover{
-    color: #ff6700;
+    color: #4b4643;
 }
 .art-content>ul{
     width: 100%;

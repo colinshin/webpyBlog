@@ -13,8 +13,6 @@ class ViewsAction(HtmlAction):
             'NAME': config.NAME,
             'create_success': False,
         }
-        print("*" * 20)
-        print(name)
         self.tmpl_dir = config.TMPL_DIR
         self.render = web.template.render(self.tmpl_dir,
                                           globals=self.globals_tmpl_funcs)

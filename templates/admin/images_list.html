@@ -1,0 +1,79 @@
+$def with (private_data)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图片列表</title>
+$:private_data['render'].admin.header(private_data)
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+$:private_data['render'].admin.aside(private_data)
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row">
+            $if private_data["create_success"]:
+                <div class="alert alert-success" role="alert">
+                  创建成功！
+                </div>
+            <div class="col-md-12 col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">图片管理</h3>
+                <div class="card-tools">
+                    <a href="$make_url('/admin/create_image')" class="btn btn-sm btn-success floatRight add-and-delete">新增</a>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>缩略图</th>
+                        <th>链接</th>
+                        <th>相册</th>
+                        <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    $for i in private_data['images_list']:
+                        <tr>
+                            <td class="mailbox-name">$i.id</td>
+                            <td class="mailbox-name">
+                                <img src="$i.thumbnail" style="height:17px;width:30px;"/>
+                            </td>
+                            <td class="mailbox-name">$i.link</td>
+                            <td class="mailbox-name" style="text-align:left;">$i.album.name</td>
+                            <td class="mailbox-name">
+                                $if i.id != 1:
+                                    <a name="$make_url('delete_image',{'image_id':i.id})" onclick="deleteConfirm(name, $i.id)" title="删除">
+                                        <img src="/static/lib/bootstrap-icons-1.0.0/trash-fill.svg" alt="" width="20" height="20" title="删除">
+                                    </a>
+                                $else:
+                                     <a  title="禁止删除">
+                                         <img src="/static/lib/bootstrap-icons-1.0.0/trash-fill.svg" alt="" width="20" height="20" title="禁止删除">
+                                     </a>
+                                <a href="$make_url('update_image',{'image_id':i.id})"  title="编辑">
+                                    <img src="/static/lib/bootstrap-icons-1.0.0/pencil-square.svg" alt="" width="20" height="20" title="编辑">
+                                </a> &nbsp;
+                            </td>
+                        </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+                <div class="card-footer">
+                    <div class="card-tools">
+                      $:get_page_str('/', private_data['current_page'], private_data['total_page'])
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+$:private_data['render'].admin.foot(private_data)
+</body>
+

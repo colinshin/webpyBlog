@@ -133,7 +133,7 @@ class BaseAction(object):
 
         return getattr(self.render, tmpl)(self.private_data)
 
-    def get_page_str(self):
+    def get_page_str(self, url, current_page, total_page=1):
         return ''
 
     def get_site_info(self):

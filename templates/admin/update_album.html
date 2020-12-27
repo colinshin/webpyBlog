@@ -54,6 +54,22 @@ $:private_data['render'].admin.aside(private_data)
                                                value="$:private_data['album'].name"
                                                placeholder="分类名称">
                                     </div>
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-danger d-inline">
+                                            <input type="radio" name="is_show"
+                                                   $if private_data['album'].is_show ==1:
+                                                        checked
+                                                    id="is_show" value="1">
+                                            <label for="is_show">设为显示</label>
+                                        </div>
+                                        <div class="icheck-danger d-inline">
+                                            <input type="radio" name="is_show"
+                                                   $if private_data['album'].is_show == 0:
+                                                        checked
+                                                    id="not_show" value="0">
+                                            <label for="not_show">不显示</label>
+                                        </div>
+                                    </div>
                                     <button type="submit"
                                             class="btn btn-success pull-right">
                                         保存

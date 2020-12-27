@@ -26,6 +26,7 @@ $:private_data['render'].admin.aside(private_data)
                     <tr>
                         <th>编号</th>
                         <th>标题</th>
+                        <th>是否显示</th>
                         <th>操作</th>
                     </tr>
                   </thead>
@@ -34,6 +35,12 @@ $:private_data['render'].admin.aside(private_data)
                     <tr>
                         <td class="mailbox-name">$i.id</td>
                         <td class="mailbox-name" style="text-align:left;">$i.name[:60]</td>
+                        <td class="mailbox-name" style="text-align:left;">
+                            $if i.is_show == 1:
+                                <span style="color: red;">显示</span>
+                            $else:
+                                不显示
+                        </td>
                         <td class="mailbox-name">
                             <a  onclick="deleteConfirm(name,$i.id)" title="详情">
                                 <img src="/static/lib/bootstrap-icons-1.0.0/trash-fill.svg" alt="" width="20" height="20" title="删除">

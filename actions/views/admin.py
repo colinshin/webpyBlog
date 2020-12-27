@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
+import base64
+import os
 from time import time
 from functools import wraps
 import web
@@ -9,6 +11,9 @@ from models.albums import Albums
 from models.friend_link import FriendLink
 from models.site import Site
 from models.tags import Tags
+from settings import config
+from util.imaging import Imaging
+from util.uploadmgr import HttpUploadedFile
 from .base import ViewsAction
 from util.pwd_util import admin_pwd_digest
 from models.articles import Articles
@@ -85,6 +90,12 @@ class AdminAction(ViewsAction):
             return self.create_link()
         elif name == 'update_link':
             return self.update_link()
+        elif name == 'images_list':
+            return self.images_list()
+        elif name == 'create_image':
+            return self.create_image()
+        elif name == 'update_image':
+            return self.update_image()
         else:
             return self.display(name)
 
@@ -117,6 +128,10 @@ class AdminAction(ViewsAction):
             return self.create_link()
         elif name == 'update_link':
             return self.update_link()
+        elif name == 'create_image':
+            return self.create_image()
+        elif name == 'update_image':
+            return self.update_image()
         else:
             return self.display(name)
 
@@ -386,12 +401,12 @@ class AdminAction(ViewsAction):
             page_size = int(inputs.get('page_size', 20))
             self.private_data['current_page'] = page
             self.private_data['total_page'] = 0
-            albums_query = Albums.select().where(Albums.status == 0).\
+            albums_query = Albums.select().where(Albums.status == 0). \
                 order_by(Albums.id.asc())
             total_count = albums_query.count()
             total_page = (total_count + page_size - 1) / page_size
             self.private_data['total_page'] = total_page
-            self.private_data['albums_list'] =\
+            self.private_data['albums_list'] = \
                 albums_query.paginate(page, page_size).execute()
             return self.display("admin/albums_list")
 
@@ -401,13 +416,20 @@ class AdminAction(ViewsAction):
         inputs = self.get_input()
         if web.ctx.method == "POST":
             name = inputs.get('name', '').strip()
+            is_show = inputs.get('is_show', 0)
             album = Albums.get_or_none(Albums.name == name)
             if album:
                 self.private_data["create_success"] = False
                 self.private_data["create_message"] = u"相册已存在"
                 return self.display("admin/create_album")
             try:
-                album = Albums(name=name)
+                if int(is_show) == 1:
+                    albums = Albums.select().where(Albums.status == 0,
+                                                   Albums.is_show == 1).execute()
+                    for album in albums:
+                        album.is_show = 0
+                        album.save()
+                album = Albums(name=name, is_show=is_show)
                 album.save()
                 self.private_data["create_success"] = True
                 self.private_data["create_message"] = u"相册创建成功"
@@ -427,6 +449,7 @@ class AdminAction(ViewsAction):
         if web.ctx.method == "POST":
             name = inputs.get('name', '').strip()
             album_id = inputs.get("album_id", None)
+            is_show = inputs.get('is_show', 0)
             exist_album = Albums.get_or_none(Albums.name == name)
             if exist_album and exist_album.id != album_id:
                 self.private_data["update_success"] = False
@@ -435,9 +458,16 @@ class AdminAction(ViewsAction):
                                                   {'album_id': album_id}))
             try:
                 album = Albums.get_or_none(Albums.id == int(album_id))
+                if int(is_show) == 1 and album.is_show == 0:
+                    albums = Albums.select().where(Albums.status == 0,
+                                                   Albums.is_show == 1).execute()
+                    for album in albums:
+                        album.is_show = 0
+                        album.save()
                 if album:
-                    Albums.update(name=name, updateTime=time()).\
-                    where(Albums.id == int(album_id)).execute()
+                    Albums.update(name=name, updateTime=time(),
+                                  is_show=is_show). \
+                        where(Albums.id == int(album_id)).execute()
                     self.private_data["update_success"] = True
                     return web.seeother(self.make_url('albums_list'))
             except Exception as e:
@@ -447,9 +477,9 @@ class AdminAction(ViewsAction):
                 return web.seeother(self.make_url('update_album',
                                                   {'album_id': album_id}))
         if web.ctx.method == "GET":
-            album_id = inputs.get("album_id",None)
+            album_id = inputs.get("album_id", None)
             if not album_id or not album_id.isdigit():
-                self.private_data["update_success"] =False
+                self.private_data["update_success"] = False
                 self.private_data["update_message"] = u"参数有误"
                 return web.seeother(self.make_url('albums_list'))
             album = Albums.get_or_none(Albums.id == int(album_id))
@@ -479,10 +509,10 @@ class AdminAction(ViewsAction):
             case_number = inputs.get('case_number', '').strip()
             copy_right = inputs.get("copyright", '').strip()
             try:
-                Site.update(username = username,
-                                      position=position,
-                                      case_number=case_number,
-                                      copyright=copy_right).\
+                Site.update(username=username,
+                            position=position,
+                            case_number=case_number,
+                            copyright=copy_right). \
                     where(Site.id == 1).execute()
                 self.private_data["update_success"] = True
                 return web.seeother(self.make_url('home'))
@@ -558,8 +588,8 @@ class AdminAction(ViewsAction):
                 flink = FriendLink.get_or_none(FriendLink.id == int(link_id))
                 if flink:
                     FriendLink.update(name=name, link=link_url,
-                                      updateTime=time()).\
-                    where(Albums.id == int(link_id)).execute()
+                                      updateTime=time()). \
+                        where(FriendLink.id == int(link_id)).execute()
                     self.private_data["update_success"] = True
                     return web.seeother(self.make_url('albums_list'))
             except Exception as e:
@@ -579,3 +609,116 @@ class AdminAction(ViewsAction):
                 return web.seeother(self.make_url('friend_links'))
             self.private_data["flink"] = flink
             return self.display("admin/update_link")
+
+    @login_required
+    @counttime
+    def images_list(self):
+        inputs = self.get_input()
+        if web.ctx.method == "GET":
+            page = int(inputs.get('page', 1))
+            page_size = int(inputs.get('page_size', 20))
+            self.private_data['current_page'] = page
+            self.private_data['total_page'] = 0
+            image_query = Images.select().where(Images.status == 0). \
+                order_by(Images.id.asc())
+            total_count = image_query.count()
+            total_page = (total_count + page_size - 1) / page_size
+            self.private_data['total_page'] = total_page
+            self.private_data['images_list'] = \
+                image_query.paginate(page, page_size).execute()
+            return self.display("admin/images_list")
+
+    def record_image(self, f, uuid, link, album_id, call_type="create",
+                     image_id=None):
+        im = Imaging(f)
+
+        origin = im.thumbnail()
+
+        try:
+            if call_type == "create":
+                Images().create(
+                    uuid=uuid,
+                    link=link,
+                    album=album_id,
+                    thumbnail=origin
+                )
+            else:
+                Images.update(link=link, album_id=album_id, thumbnail=origin,
+                              uuid=uuid, updateTime=time()). \
+                    where(Images.id == int(image_id)).execute()
+            if not os.path.exists(config.UPLOAD_DIR):
+                os.makedirs(config.UPLOAD_DIR)
+            file_name = str(uuid) + ".jpeg"
+            tmp_file = os.path.join(config.UPLOAD_DIR, file_name)
+            with open(tmp_file, 'wb') as fs:
+                fs.write(f)
+        except Exception as e:
+            print(traceback.format_exc())
+            log.error(traceback.format_exc())
+        return uuid
+
+    @login_required
+    @counttime
+    def create_image(self):
+        if web.ctx.method == "POST":
+            link_url = web.input().get('link', '').strip()
+            album_id = int(web.input().get('album_id'))
+            file = web.input().get("file")
+            try:
+                f = HttpUploadedFile(file)
+                self.record_image(f=file, uuid=f.uuid(), link=link_url,
+                                  call_type='create', album_id=album_id)
+                self.private_data["create_success"] = True
+                self.private_data["create_message"] = u"链接创建成功"
+                return web.seeother(self.make_url('images_list'))
+            except Exception as e:
+                log.error('create album failed%s' % traceback.format_exc())
+                self.private_data["create_success"] = False
+                self.private_data["create_message"] = u"创建失败"
+                albums = Albums.select().where(Albums.status == 0). \
+                    order_by(Albums.id.asc()).execute()
+                self.private_data["albums_list"] = albums
+                return self.display("admin/create_image")
+        if web.ctx.method == "GET":
+            albums = Albums.select().where(Albums.status == 0). \
+                order_by(Albums.id.asc()).execute()
+            self.private_data["albums_list"] = albums
+            return self.display("admin/create_image")
+
+    @login_required
+    @counttime
+    def update_image(self):
+        if web.ctx.method == "POST":
+            image_id = web.input().get("image_id", None)
+            link_url = web.input().get('link', '').strip()
+            album_id = int(web.input().get('album_id'))
+            file = web.input().get("file")
+            try:
+                flink = Images.get_or_none(Images.id == int(image_id))
+                if flink:
+                    f = HttpUploadedFile(file)
+                    self.record_image(f=file, uuid=f.uuid(), link=link_url,
+                                      call_type='update', album_id=album_id,
+                                      image_id=image_id)
+                    self.private_data["update_success"] = True
+                    return web.seeother(self.make_url('images_list'))
+            except Exception as e:
+                log.error('create album failed%s' % traceback.format_exc())
+                self.private_data["update_success"] = False
+                self.private_data["update_message"] = u"更新相册失败"
+                return web.seeother(self.make_url('update_image',
+                                                  {'image_id': image_id}))
+        if web.ctx.method == "GET":
+            image_id = web.input().get("image_id", None)
+            if not image_id or not image_id.isdigit():
+                self.private_data["update_success"] = False
+                self.private_data["update_message"] = u"参数有误"
+                return web.seeother(self.make_url('images_list'))
+            f_image = Images.get_or_none(Images.id == int(image_id))
+            if not f_image:
+                return web.seeother(self.make_url('images_list'))
+            albums = Albums.select().where(Albums.status == 0). \
+                order_by(Albums.id.asc()).execute()
+            self.private_data["albums_list"] = albums
+            self.private_data["image"] = f_image
+            return self.display("admin/update_image")

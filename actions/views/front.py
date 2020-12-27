@@ -2,6 +2,10 @@
 # coding=utf-8
 
 import web
+
+from models.albums import Albums
+from models.images import Images
+from settings import config
 from .base import ViewsAction
 from models.articles import Articles
 from models.categories import Categories
@@ -27,6 +31,17 @@ class FrontIndexAction(ViewsAction):
         self.private_data['total_page'] = 0
         self.private_data['category_list'] = []
         try:
+            album = Albums.get(Albums.is_show == 1)
+            images = Images.select().where(Images.status == 0,
+                                                Images.album == album.id)
+            images_dict_list = []
+            for image in images.dicts().iterator():
+                image_dict = {
+                    'link': image.get("link"),
+                    'url': config.WEB_URL + 'static/uploads/' +
+                           image.get("uuid") + '.jpeg'
+                }
+                images_dict_list.append(image_dict)
             category_list = Categories.select().where(
                 Categories.status == 0). \
                 order_by(Categories.id.desc())
@@ -38,6 +53,7 @@ class FrontIndexAction(ViewsAction):
             self.private_data['article_list'] = article_list.execute()
             self.private_data['current_page'] = page
             self.private_data['total_page'] = total_page
+            self.private_data['images_list'] = images_dict_list
             self.private_data['category_list'] = category_list.execute()
         except Exception as e:
             log.error('Failed to get home data. Error msg %s', e)

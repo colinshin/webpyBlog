@@ -11,7 +11,7 @@ $def with (private_data)
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>创建相册</title>
+    <title>更新图片</title>
     <!-- Font Awesome -->
     <link rel="stylesheet"
           href="$static_url('lib/AdminLTE/plugins/fontawesome-free/css/all.min.css')">
@@ -41,28 +41,43 @@ $:private_data['render'].admin.aside(private_data)
                         <div class="card card-outline card-info">
                             <div class="card-header">
                                 <h3 class="card-title">
-                                    创建相册
+                                    创建链接
                                 </h3>
                             </div>
                             <div class="card-body pad">
-                                <form action="$make_url('create_album')"
+                                <form action="$make_url('update_image')" enctype="multipart/form-data"
                                       method="POST">
+                                    <input type="hidden" name="image_id" value="$:private_data['image'].id">
                                     <div class="form-group">
-                                        <label for="name">标题</label>
-                                        <input type="name" class="form-control"
-                                               id="name" name="name"
-                                               placeholder="请输入标题">
+                                        <label for="link">链接</label>
+                                        <input type="url" class="form-control"
+                                               id="link" name="link"
+                                               value="$:private_data['image'].link"
+                                               placeholder="请输入链接">
                                     </div>
-                                    <div class="form-group clearfix">
-                                        <div class="icheck-danger d-inline">
-                                            <input type="radio" name="is_show"
-                                                    id="is_show" value="1">
-                                            <label for="is_show">设为显示</label>
-                                        </div>
-                                        <div class="icheck-danger d-inline">
-                                            <input type="radio" name="is_show"
-                                                    id="not_show" value="0">
-                                            <label for="not_show">不显示</label>
+                                    <div class="form-group">
+                                        <label>相册</label>
+                                        <select class="form-control select2" name="album_id" style="width: 100%;">
+                                            $for a in private_data['albums_list']:
+                                                <option value="$a.id">$a.name</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">File
+                                            input</label>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file"
+                                                       class="custom-file-input"
+                                                       name="file"
+                                                       id="exampleInputFile">
+                                                <label class="custom-file-label"
+                                                       for="exampleInputFile">选择文件</label>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"
+                                                      id="">上传</span>
+                                            </div>
                                         </div>
                                     </div>
                                     <button type="submit"
@@ -70,7 +85,6 @@ $:private_data['render'].admin.aside(private_data)
                                         保存
                                     </button>
                                 </form>
-
                             </div>
                         </div>
                     </div>
@@ -80,5 +94,11 @@ $:private_data['render'].admin.aside(private_data)
     </div>
 </div>
 $:private_data['render'].admin.foot(private_data)
+<script src="$static_url('lib/AdminLTE/plugins/bs-custom-file-input/bs-custom-file-input.min.js')"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+  bsCustomFileInput.init();
+});
+</script>
 </body>
 </html>
