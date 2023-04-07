@@ -16,6 +16,8 @@
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+set global innodb_file_format = BARRACUDA;
+set global innodb_large_prefix = ON;
 
 -- ----------------------------
 -- Table structure for albums
