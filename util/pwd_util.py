@@ -5,8 +5,8 @@ import os
 import random
 import time
 import base64
-from Cryptodome.Cipher import AES
-from Cryptodome import Random
+from Crypto.Cipher import AES
+from Crypto import Random
 
 from settings import config
 
